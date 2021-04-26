@@ -158,8 +158,7 @@ src
 
 #### ERD Model
 
-https://app.diagrams.net/#G1X-T6-Gz8MPxY0Nima3ZIRhlxR-E95oRa
-
+https://drive.google.com/file/d/1X-T6-Gz8MPxY0Nima3ZIRhlxR-E95oRa/view?usp=sharing
 <br>
 
 ***
