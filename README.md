@@ -46,9 +46,6 @@
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
-
 ![Homepage](https://user-images.githubusercontent.com/75396967/116028313-df47f300-a624-11eb-8631-f686e8b033fa.png)
 
 - Bartenders Screen![All Bartenders - Queried Bartneders](https://user-images.githubusercontent.com/75396967/116033500-8762b980-a62f-11eb-8706-cdfa0277bf9c.png)
@@ -82,8 +79,6 @@
 https://whimsical.com/rent-a-tender-48VghggHeRevpAmLnWLGuw
 
 #### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
