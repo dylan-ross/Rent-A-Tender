@@ -4,7 +4,7 @@
 
 ## Overview
 
-**Rent-A-Tender**, is an App to find and hire freelance bartenders to work a party or event. Bartenders create profiles, Members can book a date and time for a bartender to work.
+**Rent-A-Tender**, is an App to find and hire freelance bartenders to work a party or event. Bartenders must register by filling out a profile which includes and hourly rate. Anyone can search bartenders, but a user must sign in to see details and book a date and time for a bartender to work. Rent-A-Tender, we bring the bar to you.
 
 <br>
 
@@ -28,7 +28,6 @@
 
 - Create a high-performing, good-looking, reactive app that connects freelancer bartenders to clients
 - Deploy one Post MVP feaure
-- 
 
 <br>
  
@@ -37,8 +36,9 @@
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       |  Library used for build a UI               |
+|      React       |  Library used to build a UI                |
 | React Router Dom |  Routing Library                           |
+|      Axios       |  Used to make api calls                    |
 |   Ruby on Rails  |  MVC Framework                             |
 
 <br>
@@ -51,31 +51,36 @@
 
 
 ![Homepage](https://user-images.githubusercontent.com/75396967/116028313-df47f300-a624-11eb-8631-f686e8b033fa.png)
-- Desktop Landing
-
 
 - Bartenders Screen![All Bartenders - Queried Bartneders](https://user-images.githubusercontent.com/75396967/116033500-8762b980-a62f-11eb-8706-cdfa0277bf9c.png)
 
+![Bartender Detail](https://user-images.githubusercontent.com/75396967/116103170-58733480-a67d-11eb-8d87-21e4bca7cc6d.png)
 
-![Dummy Link](url)
+![User Sign-Up](https://user-images.githubusercontent.com/75396967/116103197-5dd07f00-a67d-11eb-841a-a8e99e9eb050.png)
 
-- Resource Index
+![User sign_in](https://user-images.githubusercontent.com/75396967/116103348-7f316b00-a67d-11eb-8b33-a46644c44320.png)
 
-![Dummy Link](url)
+![Bartender Sign-up](https://user-images.githubusercontent.com/75396967/116103393-8b1d2d00-a67d-11eb-988a-8accacd0e0b0.png)
 
-- Resource Show
+![Bartender Sign-in](https://user-images.githubusercontent.com/75396967/116103414-8eb0b400-a67d-11eb-9bc1-b318f6b75e2e.png)
 
-![Dummy Link](url)
+![Bartender create-update profile page](https://user-images.githubusercontent.com/75396967/116103436-94a69500-a67d-11eb-8990-d0f693d5c687.png)
 
-- Tablet Resource Index
+![Booking Confrimation](https://user-images.githubusercontent.com/75396967/116103461-9bcda300-a67d-11eb-9a1c-d4c020dc4f28.png)
 
-![Dummy Link](url)
+![Booking Modal](https://user-images.githubusercontent.com/75396967/116103480-9ff9c080-a67d-11eb-965a-b9172c749c6f.png)
 
-- Mobile Resource Index
+![Web 1920 – 3](https://user-images.githubusercontent.com/75396967/116103585-ba339e80-a67d-11eb-83b6-cca262cee396.png)
+
+<img width="489" alt="Screen Shot 2021-04-26 at 10 55 01 AM" src="https://user-images.githubusercontent.com/75396967/116103850-f666ff00-a67d-11eb-9ef9-2755d8b1dfba.png">
+
+
+![Uploading Screen Shot 2021-04-26 at 10.55.01 AM.png…]()
+
 
 #### Component Tree
 
-https://whimsical.com/rent-a-tender-EfKyqJveZxKhXq6aLEExYf
+https://whimsical.com/rent-a-tender-48VghggHeRevpAmLnWLGuw
 
 #### Component Architecture
 
@@ -150,8 +155,6 @@ src
 | TOTAL               |          |    48.75 hrs   |       TBD     |     TBD     |
 
  
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
-
 <br>
 
 ### Server (Back End)
@@ -166,14 +169,15 @@ https://app.diagrams.net/#G1X-T6-Gz8MPxY0Nima3ZIRhlxR-E95oRa
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Users can rate bartenders
+- Users can review bartenders
+- Highest rated bartenders get rendered on landing screen
+- Dynamic Calender so Bartenders don't get overbooked
 
 ***
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
