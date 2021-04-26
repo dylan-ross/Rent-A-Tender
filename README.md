@@ -157,7 +157,6 @@ src
 ### Server (Back End)
 
 #### ERD Model
-
 https://drive.google.com/file/d/1X-T6-Gz8MPxY0Nima3ZIRhlxR-E95oRa/view?usp=sharing
 <br>
 
