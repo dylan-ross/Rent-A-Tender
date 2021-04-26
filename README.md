@@ -10,10 +10,10 @@
 
 ## MVP
 
-- Have a **RESTful JSON API**.
-  - Build a **Ruby on Rails** server, exposing RESTful JSON endpoints.
-  - Build a database with at least 3 tables: Users, Bartenders, Jobs
-  - Utilize **Rails** to define bartender, user, and job models for interacting with the database.
+- Have a RESTful JSON API.
+  - Build a Ruby on Rails server, exposing RESTful JSON endpoints.
+  - Build a database with 3 tables: Users, Bartenders, Jobs
+  - Utilize to define bartender, user, and job models for interacting with the database.
   - Implement working controller actions for Full CRUD on my jobs table  
 
 
@@ -27,7 +27,8 @@
 ### Goals
 
 - Create a high-performing, good-looking, reactive app that connects freelancer bartenders to clients
-- Gain deeper understanding of full_stack engineering
+- Deploy one Post MVP feaure
+- 
 
 <br>
  
@@ -48,13 +49,13 @@
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
 
+![Homepage](https://user-images.githubusercontent.com/75396967/116028313-df47f300-a624-11eb-8631-f686e8b033fa.png)
 - Desktop Landing
 
-![Dummy Link](url)
 
-- Desktop Hero
+- Bartenders Screen![All Bartenders - Queried Bartneders](https://user-images.githubusercontent.com/75396967/116033500-8762b980-a62f-11eb-8706-cdfa0277bf9c.png)
+
 
 ![Dummy Link](url)
 
