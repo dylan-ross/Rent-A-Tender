@@ -1,5 +1,4 @@
 
-
 # Rent-A-Tender
 
 ## Overview
@@ -72,10 +71,10 @@
 
 ![Web 1920 – 3](https://user-images.githubusercontent.com/75396967/116103585-ba339e80-a67d-11eb-83b6-cca262cee396.png)
 
-<img width="489" alt="Screen Shot 2021-04-26 at 10 55 01 AM" src="https://user-images.githubusercontent.com/75396967/116103850-f666ff00-a67d-11eb-9ef9-2755d8b1dfba.png">
+
+<img width="362" alt="Screen Shot 2021-04-26 at 12 25 21 PM" src="https://user-images.githubusercontent.com/75396967/116117662-7e530600-a68a-11eb-9312-0784d7591a51.png">
 
 
-![Uploading Screen Shot 2021-04-26 at 10.55.01 AM.png…]()
 
 
 #### Component Tree
