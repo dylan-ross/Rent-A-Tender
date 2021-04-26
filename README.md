@@ -4,7 +4,7 @@
 
 ## Overview
 
-**Rent-A-Tender**, is an App to find and hire freelance bartenders to work a party or event. Bartenders must register by filling out a profile which includes and hourly rate. Anyone can search bartenders, but a user must sign in to see details and book a date and time for a bartender to work. Rent-A-Tender, we bring the bar to you.
+**Rent-A-Tender**, is an App to find and hire freelance bartenders to work a party or event. Bartenders must register by filling out a profile which includes and hourly rate. Anyone can search bartenders, but a user must sign in to see details and book a date and time for a bartender to work. Rent-A-Tender, we bring the bar...tender to you.
 
 <br>
 
