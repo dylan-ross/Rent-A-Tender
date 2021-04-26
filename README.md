@@ -46,6 +46,9 @@
 
 #### Wireframes
 
+<img width="1038" alt="Screen Shot 2021-04-26 at 1 37 57 AM" src="https://user-images.githubusercontent.com/75396967/116134577-10b0d500-a69e-11eb-9701-d014694fee33.png">
+
+
 ![Homepage](https://user-images.githubusercontent.com/75396967/116028313-df47f300-a624-11eb-8631-f686e8b033fa.png)
 
 - Bartenders Screen![All Bartenders - Queried Bartneders](https://user-images.githubusercontent.com/75396967/116033500-8762b980-a62f-11eb-8706-cdfa0277bf9c.png)
