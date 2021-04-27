@@ -16,9 +16,13 @@ class BartendersController < ApplicationController
   # POST /bartenders
   def create
     @bartender = Bartender.new(bartender_params)
-
+    
     if @bartender.save
-      render json: @bartender, status: :created
+      @token = encode({id: @bartender.id})
+      render json: {
+        user: @bartender.attributes.except("password_digest"),
+        token: @token
+        }, status: :created
     else
       render json: @bartender.errors, status: :unprocessable_entity
     end
