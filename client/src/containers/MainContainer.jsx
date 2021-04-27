@@ -6,3 +6,6 @@ import BartenderProfileForm from '../screens/bartenderProfileForm/bartenderProfi
 import BartenderJobs from '../screens/bartenderJobs/BartenderJobs';
 import Confirmation from '../screens/confirmation/Confirmation';
 import UserEvents from '../screens/userEvents/UserEvents'
+import { getAllJobs, postJob, putJob, deleteJob, } from '../services/jobs'
+
+
