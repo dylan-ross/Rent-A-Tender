@@ -1,6 +1,6 @@
 class BartendersController < ApplicationController
   before_action :set_bartender, only: [:show, :update, :destroy]
-
+  before_action :authorize_request, except: :create
   # GET /bartenders
   def index
     @bartenders = Bartender.all
