@@ -6,6 +6,7 @@ import UserSignIn from '../src/screens/userSignIn/UserSignIn';
 import UserSignUp from '../src/screens/userSignUp/UserSignUp';
 import BartenderSignIn from '../src/screens/bartenderSignIn/BartenderSignIn';
 import BartenderSignUp from '../src/screens/bartenderSignUp/BartenderSignUp';
+import Home from '../src/screens/home/Home'
 import { signInUser, signUpUser, removeToken, verifyUser, signInBartender, signUpBartender, verifyBartender } from '../src/services/auth';
 import MainContainer from '../src/containers/MainContainer';
 
@@ -83,6 +84,9 @@ function App() {
           </Route>
           <Route exact path='/bartender_signup'>
             <BartenderSignUp handleSignUpBartender={handleSignUpBartender} />
+          </Route>
+          <Route exact path='/'> 
+            <Home/>
           </Route>
           <Route path='/'>
             <MainContainer currentUser={currentUser} currentBartender={currentBartender} />
