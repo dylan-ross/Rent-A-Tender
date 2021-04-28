@@ -22,7 +22,7 @@ export default function BartenderSignIn(props) {
       e.preventDefault();
       handleSignInBartender(formData)
     }}>
-      <h3>Sign In</h3>
+      <h3>Bartender Sign In</h3>
       <label>
         Name:
         <input

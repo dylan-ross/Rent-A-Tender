@@ -1,10 +1,10 @@
 import "./Layout.css"
-import Navbar from '../navbar/Navbar';
+// import Navbar from '../navbar/Navbar';
 
 
 const Layout = (props) => (
   <div className='layout'>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="layout-children">
           {props.children}
       </div>
