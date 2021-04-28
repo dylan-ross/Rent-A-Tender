@@ -70,7 +70,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Rent-A-Tender</h1>
       <Layout currentBartender={setCurrentBartender} currentUser={currentUser} handleSignOutBartender={handleSignOutBartender} handleSignOutUser={handleSignOutUser}>
         <Switch>
           <Route exact path='/user_signin'>
