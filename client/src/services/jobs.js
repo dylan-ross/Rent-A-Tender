@@ -16,7 +16,7 @@ export const postJobs = async (jobData) => {
   return resp.data;
 }
 
-export const putjob = async (id, jobData) => {
+export const putJob = async (id, jobData) => {
   const resp = await api.put(`/jobs/${id}`, { job: jobData });
   return resp.data;
 }
