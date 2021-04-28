@@ -1,7 +1,10 @@
 import './Bartender.css';
 import { Link } from "react-router-dom";
+import { bartenders } from '../../services/bartenders';
 
 const Bartender = (props) => {
+  const { bartenders } = props
+  console.log(bartenders)
   return (
     <>
       <Link className="bartender" to={`/bartenders/${props._id}`}>

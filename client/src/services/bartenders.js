@@ -1,21 +1,21 @@
 import api from './apiConfig';
 
 export const getAllBartenders = async () => {
-  const resp = await api.get('/foods');
+  const resp = await api.get('/bartenders');
   return resp.data;
 }
 
 export const getOneBartender = async (id) => {
-  const resp = await api.get(`/jobs/${id}`);
+  const resp = await api.get(`/bartenders/${id}`);
   return resp.data;
 }
 
-export const postBartender = async (jobData) => {
-  const resp = await api.post('/jobs', { job: jobData });
+export const postBartender = async (bartenderData) => {
+  const resp = await api.post('/bartender', { bartender: bartenderData });
   return resp.data;
 }
 
-export const putBartender = async (id, jobData) => {
-  const resp = await api.put(`/jobs/${id}`, { job: jobData });
+export const putBartender = async (id, bartenderData) => {
+  const resp = await api.put(`/jobs/${id}`, { bartender: bartenderData });
   return resp.data;
 }
