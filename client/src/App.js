@@ -5,6 +5,7 @@ import Layout from '../src/components/layout/Layout';
 import UserSignIn from '../src/screens/userSignIn/UserSignIn';
 import UserSignUp from '../src/screens/userSignUp/UserSignUp';
 import BartenderSignIn from '../src/screens/bartenderSignIn/BartenderSignIn';
+import BartenderSignUp from '../src/screens/bartenderSignUp/BartenderSignUp';
 import { signInUser, signUpUser, removeToken, verifyUser, signInBartender, signUpBartender, verifyBartender } from '../src/services/auth';
 import MainContainer from '../src/containers/MainContainer';
 
@@ -72,8 +73,20 @@ function App() {
       <h1>Rent-A-Tender</h1>
       <Layout currentBartender={setCurrentBartender} currentUser={currentUser} handleSignOutBartender={handleSignOutBartender} handleSignOutUser={handleSignOutUser}>
         <Switch>
-          <Route path='/user_signin'>
+          <Route exact path='/user_signin'>
             <UserSignIn handleSignInUser={handleSignInUser} />
+          </Route>
+          <Route exact path='/user_signup'>
+            <UserSignUp handleSignUpUser={handleSignUpUser} />
+          </Route>
+          <Route exact path='/bartender_signin'>
+            <BartenderSignIn handleSignInBartender={handleSignInBartender} />
+          </Route>
+          <Route exact path='/bartender_signup'>
+            <BartenderSignUp handleSignUpBartender={handleSignUpBartender} />
+          </Route>
+          <Route path='/'>
+            <MainContainer currentUser={currentUser} currentBartender={currentBartender} />
           </Route>
         </Switch>
       </Layout>
