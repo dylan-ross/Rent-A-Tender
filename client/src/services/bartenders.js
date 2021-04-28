@@ -10,7 +10,7 @@ export const getOneBartender = async (id) => {
   return resp.data;
 }
 
-export const postBartenders = async (jobData) => {
+export const postBartender = async (jobData) => {
   const resp = await api.post('/jobs', { job: jobData });
   return resp.data;
 }
