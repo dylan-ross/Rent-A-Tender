@@ -1,14 +1,14 @@
 
-import api from './api-helper';
+import api from './apiConfig';
 
-export const loginUser = async (loginData) => {
+export const signInUser = async (loginData) => {
   const resp = await api.post('/auth/login', { authentication: loginData })
   localStorage.setItem('authToken', resp.data.token);
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
   return resp.data.user
 }
 
-export const registerUser = async (registerData) => {
+export const signUpUser = async (registerData) => {
   const resp = await api.post('/users/', { user: registerData })
   localStorage.setItem('authToken', resp.data.token);
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
@@ -29,14 +29,14 @@ export const removeToken = () => {
   api.defaults.headers.common.authorization = null
 }
 
-export const loginBartender = async (loginData) => {
+export const signInBartender = async (loginData) => {
   const resp = await api.post('/auth/login', { authentication: loginData })
   localStorage.setItem('authToken', resp.data.token);
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
   return resp.data.bartender
 }
 
-export const registerBartender = async (registerData) => {
+export const signUpBartender = async (registerData) => {
   const resp = await api.post('/users/', { user: registerData })
   localStorage.setItem('authToken', resp.data.token);
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
@@ -53,6 +53,6 @@ export const verifyBartender = async () => {
   return null
 }
 
-export const removeToken = () => {
-  api.defaults.headers.common.authorization = null
-}
+// export const removeToken = () => {
+//   api.defaults.headers.common.authorization = null
+// }

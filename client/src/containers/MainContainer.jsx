@@ -6,8 +6,10 @@ import BartenderProfileForm from '../screens/bartenderProfileForm/bartenderProfi
 import BartenderJobs from '../screens/bartenderJobs/BartenderJobs';
 import Confirmation from '../screens/confirmation/Confirmation';
 import UserJobs from '../screens/userJobs/UserJobs';
+import JobForm from '../screens/jobForm/JobForm';
+
 import { getAllJobs, postJob, putJob, deleteJob, } from '../services/jobs';
-import { getAllBartenders, postBartender, putBartender} from '../services/jobs';
+import { getAllBartenders, postBartender, putBartender} from '../services/bartenders';
 
 export default function MainContainer(props) {
   const [bartenders, setBartenders] = useState([]);
