@@ -15,7 +15,7 @@ export default function Layout(props) {
               <button onClick={handleSignOutUser}>Logout</button>
             </>
             :
-            <Link to='/user_signin'>Login/Register</Link>
+            <Link to='/user_signin'>Sign In / Sign Up</Link>
         }
         <hr />
         {

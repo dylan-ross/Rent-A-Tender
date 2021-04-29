@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  post '/auth/login', to: 'authentication#login'
-  get '/auth/verify', to: 'authentication#verify'
+  post '/auth/login', to: 'authentication#user_login'
+  get '/auth/verify', to: 'authentication#user_verify'
   resources :users, only: :create do
     resources :jobs, shallow: true
   end

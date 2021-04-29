@@ -7,7 +7,7 @@ const BartenderDetail = (props) => {
   const [bartenderItem, setBartenderItem] = useState(null);
   const { id } = useParams();
   const { currentUser } = props;
-
+  console.log(props)
   useEffect(() => {
     const fetchBartender = async () => {
       const bartenderData = await getOneBartender(id);
