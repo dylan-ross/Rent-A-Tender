@@ -8,7 +8,8 @@ import Search from "../../components/search/Search";
 
 const Bartenders = (props) => {
   const [queriedBartenders, setQueriedBartenders] = useState([]);
-  const { bartenders, currentUser } = props;
+  const { bartenders } = props;
+  console.log(props)
   
   const handleSearch = (event) => {
     const newQueriedBartenders = bartenders.filter((bartender) =>
@@ -41,7 +42,7 @@ const Bartenders = (props) => {
   const handleSubmit = (event) => event.preventDefault();
 
   return (
-    <Layout currentUser={currentUser}>
+
       <div className="bartender-screen-container">
         <div className="header">
           <h3 className="bartenders-title">Bartenders</h3>
@@ -49,7 +50,6 @@ const Bartenders = (props) => {
         </div>
         {bartendersJSX}
       </div>
-    </Layout>
   );
 };
 
