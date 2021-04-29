@@ -1,4 +1,4 @@
-import Search from '../../components/search/Search1'
+import Search from '../../components/search/Search'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 

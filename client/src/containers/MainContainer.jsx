@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
-import Bartenders from '../screens/bartenders/Bartenders1';
+import Bartenders from '../screens/bartenders/Bartenders';
 import BartenderDetail from '../screens/bartenderDetail/BartenderDetail';
-import BartenderProfileForm from '../screens/bartenderProfileForm/BartenderProfileForm1';
-import BartenderJobs from '../screens/bartenderJobs/BartenderJobs1';
-import Confirmation from '../screens/confirmation/Confirmation1';
-import UserJobs from '../screens/userJobs/UserJobs1';
-import JobForm from '../screens/jobForm/JobForm1';
+import BartenderProfileForm from '../screens/bartenderProfileForm/BartenderProfileForm';
+import BartenderJobs from '../screens/bartenderJobs/BartenderJobs';
+import Confirmation from '../screens/confirmation/Confirmation';
+import UserJobs from '../screens/userJobs/UserJobs';
+import JobForm from '../screens/jobForm/JobForm';
 
 import { getAllJobs, postJob, putJob, deleteJob, } from '../services/jobs';
 import { getAllBartenders, postBartender, putBartender} from '../services/bartenders';

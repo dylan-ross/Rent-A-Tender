@@ -1,5 +1,5 @@
 import "./Layout.css"
-import Navbar from '../navbar/Navbar1';
+import Navbar from '../navbar/Navbar';
 
 
 const Layout = (props) => (

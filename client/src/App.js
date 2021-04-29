@@ -2,13 +2,13 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { useHistory, Route, Switch } from 'react-router-dom';
 import Layout from './components/layout/Layout1';
-import UserSignIn from './screens/userSignIn/UserSignIn1';
-import UserSignUp from './screens/userSignUp/UserSignUp1';
-import BartenderSignIn from './screens/bartenderSignIn/BartenderSignIn1';
+import UserSignIn from './screens/userSignIn/UserSignIn';
+import UserSignUp from './screens/userSignUp/UserSignUp';
+import BartenderSignIn from './screens/bartenderSignIn/BartenderSignIn';
 import BartenderSignUp from './screens/bartenderSignUp/BartenderSignUp1';
-import Home from './screens/home/Home1'
+import Home from './screens/home/Home'
 import { signInUser, signUpUser, removeToken, verifyUser, signInBartender, signUpBartender, verifyBartender } from '../src/services/auth';
-import MainContainer from './containers/MainContainer1';
+import MainContainer from './containers/MainContainer';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
