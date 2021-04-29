@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Register(props) {
+export default function UserSignUp(props) {
   const [formData, setFormData] = useState({
     username: '',
     email:'',
@@ -8,7 +8,8 @@ export default function Register(props) {
   })
   const { username, email, password } = formData;
   const { handleSignUpUser } = props;
-
+  console.log(props)
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({

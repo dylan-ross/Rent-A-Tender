@@ -1,11 +1,11 @@
-  
-import React from 'react';
+import "./Navbar.css"  
 import { Link } from 'react-router-dom';
 
 export default function Layout(props) {
   const { currentBartender, currentUser, handleSignOutBartender, handleSignOutUser } = props;
+  console.log(props)
   return (
-    <div>
+    <div className="nav">
       <header>
         <Link to='/'><h1>Rent-A-Tender</h1></Link>
         {
@@ -15,9 +15,9 @@ export default function Layout(props) {
               <button onClick={handleSignOutUser}>Logout</button>
             </>
             :
-            <Link to='/user_signin'>Login/Register</Link>
+            <Link to='/user_signin'>Sign In / Sign Up</Link>
         }
-        <hr />
+   
         {
           currentBartender ?
             <>
@@ -27,7 +27,6 @@ export default function Layout(props) {
             :
             <Link to='/bartender_signin'>Bartend</Link>
         }
-        <hr />
         {/* {
           currentUser &&
           <>
