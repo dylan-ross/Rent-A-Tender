@@ -7,7 +7,7 @@ export default function Layout(props) {
   return (
     <div>
       <header>
-        <h1>Rent-A-Tender</h1>
+        <Link to='/'><h1>Rent-A-Tender</h1></Link>
         {
           currentUser ?
             <>
