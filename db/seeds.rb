@@ -96,7 +96,7 @@ bartender = Bartender.create(
     bio: "Need a show and some service I'm your lady! I've competed in flair competions from here to vegas, and I can make drink too!",
     skills: ['speed', 'multitasker', 'high-energy', 'fire'],
     rate: 80,
-    img_url: 'https://imgur.com/Q2YrTk1'
+    img_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.rimonthly.com%2Fwp-content%2Fuploads%2F2019%2F11%2FN9EC83BAR1.jpg'
   },
   {
     name: 'Bam Margarita',

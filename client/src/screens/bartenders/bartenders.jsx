@@ -25,18 +25,18 @@ const Bartenders = (props) => {
     );
   }
 
-//   const bartendersJSX = {bartenders.map((bartender, index) => (
-//     <React.Fragment key={index}>
-//       <Link
-//         className="bartender"
-//         to={`/bartenders/${bartender.id}`}
-//       >
-//         <img className="bartender-image" src={props.img_url} alt={props.name} />
-//         <h3 className="bartender-name">{props.name}</h3>
-//       </Link>
-//     </React.Fragment>
-//   ))
-// };
+  const bartendersJSX = bartenders.map((bartender, index) => (
+    <React.Fragment key={index}>
+      <Link className="bartender" to={`/bartenders/${bartender.id}`}>
+        <img
+          className="bartender-image"
+          src={bartender.img_url}
+          alt={bartender.name}
+        />
+        <h3 className="bartender-name">{bartender.name}</h3>
+      </Link>
+    </React.Fragment>
+  ));
 
   const handleSubmit = (event) => event.preventDefault();
 
@@ -47,18 +47,7 @@ const Bartenders = (props) => {
           <h3 className="bartenders-title">Bartenders</h3>
           <Search onSubmit={handleSubmit} onChange={handleSearch} />
         </div>
-        {bartenders.map((bartender, index) => (
-    <React.Fragment key={index}>
-      <Link
-        className="bartender"
-        to={`/bartenders/${bartender.id}`}
-      >
-        <img className="bartender-image" src={bartender.img_url} alt={bartender.name} />
-        <h3 className="bartender-name">{bartender.name}</h3>
-      </Link>
-    </React.Fragment>
-  ))
-}
+        {bartendersJSX}
       </div>
     </Layout>
   );

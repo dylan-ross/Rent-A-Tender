@@ -76,8 +76,8 @@ export default function MainContainer(props) {
       <Route exact path='/bartenders'>
         <Bartenders bartenders={bartenders} currentUser={currentUser}/>
       </Route>
-      <Route exact path='/bartender/:id'>
-        <BartenderDetail bartenders={bartenders}/>
+      <Route exact path='/bartenders/:id'>
+        <BartenderDetail bartenders={bartenders} currentUser={currentUser}/>
       </Route>
       <Route exact path='/bartenders/:id/create_profile'>
         <BartenderProfileForm bartenders={bartenders} handleCreateBartender={handleCreateBartender}/>
