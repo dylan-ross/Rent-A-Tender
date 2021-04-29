@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Bartenders.css";
-import Layout from "../../components/layout/Layout1";
 import Search from "../../components/search/Search";
-// import Bartender from "../../components/bartender/Bartender";
-// import { bartenders, currentUser } from "../../services/bartenders";
+import { bartenders, currentUser } from "../../services/bartenders";
 
 const Bartenders = (props) => {
   const [queriedBartenders, setQueriedBartenders] = useState([]);

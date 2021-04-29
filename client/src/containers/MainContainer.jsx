@@ -15,7 +15,7 @@ export default function MainContainer(props) {
   const [bartenders, setBartenders] = useState([]);
   const [jobs, setJobs] = useState([]);
   const history = useHistory();
-  const { currentUser } = props;
+  const { currentUser, currentBartender } = props;
 
   useEffect(() => {
     const fetchBartenders = async () => {
@@ -85,9 +85,9 @@ export default function MainContainer(props) {
       {/* <Route exact path='/bartenders/:id/edit_profile'>
         <BartenderProfileForm bartenders={bartenders} handleEditBartender={handleEditBartender}/>
       </Route> */}
-      {/* <Route exact path='/bartenders/:bartender_id/jobs'>
-        <BartenderJobs bartenders={bartenders} jobs={jobs} handleDeleteJob={handleDeleteJob}/>
-      </Route> */}
+      <Route exact path='/bartenders/:bartender_id/jobs'>
+        <BartenderJobs currentBartender={currentBartender} jobs={jobs} handleDeleteJob={handleDeleteJob}/>
+      </Route>
       <Route exact path='/users/user_:id/jobs/new'>
         <JobForm currentUser={currentUser} jobs={jobs} handleCreateJob={handleCreateJob}/>
       </Route>
