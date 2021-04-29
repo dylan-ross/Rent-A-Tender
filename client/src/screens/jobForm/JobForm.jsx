@@ -1,8 +1,8 @@
 const JobForm = (props) => {
-  console.log(props)
+  console.log(props);
   return (
-    <h2>Jobform</h2>
-  )
-}
+      <h2>JobForm</h2>
+  );
+};
 
-export default JobForm
+export default JobForm;

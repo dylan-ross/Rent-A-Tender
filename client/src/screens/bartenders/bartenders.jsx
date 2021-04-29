@@ -9,7 +9,7 @@ import { bartenders, currentUser } from "../../services/bartenders";
 const Bartenders = (props) => {
   const [queriedBartenders, setQueriedBartenders] = useState([]);
   const { bartenders, currentUser } = props;
-  console.log(bartenders);
+  
   const handleSearch = (event) => {
     const newQueriedBartenders = bartenders.filter((bartender) =>
       bartender.name.toLowerCase().includes(event.target.value.toLowerCase())

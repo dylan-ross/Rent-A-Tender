@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 export default function BartenderSignIn(props) {
   const [formData, setFormData] = useState({
-    name: '',
+    username: '',
     password: ''
   })
-  const { name, password } = formData;
+  const { username, password } = formData;
   const { handleSignInBartender } = props;
 
   const handleChange = (e) => {
@@ -27,8 +27,8 @@ export default function BartenderSignIn(props) {
         Name:
         <input
           type='text'
-          name='name'
-          value={name}
+          name='username'
+          value={username}
           onChange={handleChange}
         />
       </label>

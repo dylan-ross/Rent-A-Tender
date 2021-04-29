@@ -7,7 +7,7 @@ const BartenderDetail = (props) => {
   const [bartenderItem, setBartenderItem] = useState(null);
   const { id } = useParams();
   const { currentUser } = props;
-  console.log(props)
+  // console.log(props)
   useEffect(() => {
     const fetchBartender = async () => {
       const bartenderData = await getOneBartender(id);
@@ -34,7 +34,7 @@ const BartenderDetail = (props) => {
       </div>
       <div className="detail-buttons">
         <Link to={`/users/${currentUser?.id}/jobs/new`}><button>Book</button></Link>
-        <Link><button>Back</button></Link>
+        <Link to={'/bartenders'}><button>Back</button></Link>
       </div>
     </div>
   );
