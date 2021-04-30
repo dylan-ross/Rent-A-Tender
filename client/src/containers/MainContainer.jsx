@@ -55,7 +55,7 @@ export default function MainContainer(props) {
   const handleCreateJob = async (formData) => {
     const jobData = await postJob(formData);
     setJobs(prevState => [...prevState, jobData])
-    history.push('/jobs/:job_id')
+    history.push('/jobs/:id')
   }
 
   const handleEditJob = async (id, formData) => {

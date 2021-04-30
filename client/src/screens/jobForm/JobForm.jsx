@@ -3,14 +3,13 @@ import { Link } from "react-router-dom"
 
 const JobForm = (props) => {
   console.log(props);
-  const [startDate, setStartDate] = useState(new Date());
   const [formData, setFormData] = useState({
     date: '',
     startTime:'',
     endTime: ''
   })
-
-  const { name, startTime, endTime } = formData;
+  const { handleCreateJob } = props
+  const { date, startTime, endTime } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,11 +22,14 @@ const JobForm = (props) => {
   return (
     <div className="job-form">
       <h2>JobForm</h2>
-      <form>
-        {/* <input type="date" name="date" value={date}/> */}
-        <input type="time"/>
-        <input type="time"/>
-        {/* <Link to={`/jobs/${jobs}`}><button>Confirm</button></Link> */}
+      <form  onSubmit={(e) => {
+        e.preventDefault();
+        handleCreateJob(formData);
+      }}>
+        <input type="date" name="date" value={date} onChange={handleChange}/>
+        <input type="time" name="startTime" value={startTime } onChange={handleChange}/>
+        <input type="time" name="endTime" value={endTime} onChange={handleChange}/>
+        <button>Confirm</button>
       </form>
     </div>
   );

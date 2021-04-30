@@ -48,7 +48,6 @@ export default function BartenderSignIn(props) {
       <br />
       <Link to='/bartender_signup'>Sign Up</Link>
       <button>Submit</button>
-      {/* <Link to={'/'}><button>Submit</button></Link> */}
     </form>
   )
 }

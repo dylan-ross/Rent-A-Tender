@@ -71,8 +71,6 @@ function App() {
     removeBarToken();
     history.push('/')
   }
-  console.log(currentBartender)
-  console.log(currentUser)
 
   return (
     <div className="App">

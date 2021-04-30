@@ -22,9 +22,6 @@ class AuthenticationController < ApplicationController
   }, status: :ok
   end
 
- 
-
-
   private
 
   def login_params
