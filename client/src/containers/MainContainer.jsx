@@ -25,13 +25,13 @@ export default function MainContainer(props) {
     fetchBartenders()
   }, [])
 
-  // useEffect(() => {
-  //   const fetchJobs = async () => {
-  //     const jobsData = await getAllJobs();
-  //     setJobs(jobsData)
-  //   }
-  //   fetchJobs()
-  // }, [])
+  useEffect(() => {
+    const fetchJobs = async () => {
+      const jobsData = await getAllJobs();
+      setJobs(jobsData)
+    }
+    fetchJobs()
+  }, [])
 
   const handleCreateBartender = async (formData) => {
     const bartenderData = await postBartender(formData);
@@ -85,18 +85,18 @@ export default function MainContainer(props) {
       {/* <Route exact path='/bartenders/:id/edit_profile'>
         <BartenderProfileForm bartenders={bartenders} handleEditBartender={handleEditBartender}/>
       </Route> */}
-      <Route exact path='/bartenders/:bartender_id/jobs'>
+      <Route exact path='/bartenders/:id/jobs'>
         <BartenderJobs currentBartender={currentBartender} jobs={jobs} handleDeleteJob={handleDeleteJob}/>
       </Route>
-      <Route exact path='/users/user_:id/jobs/new'>
-        <JobForm currentUser={currentUser} jobs={jobs} handleCreateJob={handleCreateJob} currentBartender={currentBartender }/>
+      <Route exact path='/users/:id/jobs/new'>
+        <JobForm currentUser={currentUser} jobs={jobs} handleCreateJob={handleCreateJob} />
       </Route>
       <Route exact path='/users/:user_id/jobs'>
-        <UserJobs currentUser={currentUser} jobs={jobs} handleEditJob={handleEditJob} handleDeleteJob={handleDeleteJob}/>
+        <UserJobs currentUser={currentUser} jobs={jobs} setJobs={setJobs}handleEditJob={handleEditJob} handleDeleteJob={handleDeleteJob}/>
       </Route>
-      {/* <Route exact path='/jobs/:id'>
+      <Route exact path='/jobs/:id'>
         <Confirmation currentUser={currentUser} jobs={jobs}/>
-      </Route> */}
+      </Route>
     </Switch>
   )
 }

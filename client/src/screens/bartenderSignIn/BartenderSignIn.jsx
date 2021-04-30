@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 
 export default function BartenderSignIn(props) {
   console.log(props)
+
   const [formData, setFormData] = useState({
-    username: '',
+    name: '',
     password: ''
   })
   const { name, password } = formData;
   const { handleSignInBartender, currentBartender } = props;
-  // console.log(currentBartender)
+  // console.log(bartenders)
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -45,7 +47,8 @@ export default function BartenderSignIn(props) {
       </label>
       <br />
       <Link to='/bartender_signup'>Sign Up</Link>
-      <Link to={`/bartenders/${currentBartender.id}/jobs`}><button>Submit</button></Link>
+      <button>Submit</button>
+      {/* <Link to={'/'}><button>Submit</button></Link> */}
     </form>
   )
 }

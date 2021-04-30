@@ -20,7 +20,7 @@ class BartendersController < ApplicationController
     if @bartender.save
       @token = encode({id: @bartender.id})
       render json: {
-        user: @bartender.attributes.except("password_digest"),
+        bartender: @bartender.as_json(except: "password_digest", include: :jobs),
         token: @token
         }, status: :created
     else

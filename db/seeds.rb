@@ -19,7 +19,7 @@ bartender = Bartender.create(
     bio: "I've worked in every type of bar and delt with every personality. I can handle the rowdiest of crowds. Perfect for Super Bowl parties.",
     skills: ['shots! shots! shots!', 'speed', 'crowd control',],
     rate: 20,
-    imgUrl: 'https://imgur.com/888GFRw'
+    img_url: 'https://imgur.com/888GFRw'
   },
   {
     name: 'Kim Thanks',
@@ -30,7 +30,7 @@ bartender = Bartender.create(
     bio: "I love to have a good time, but know when to work. Guarenteed to make your next party a party!",
     skills: ['whiskey', 'speed', 'banter',],
     rate: 30,
-    imgUrl: 'https://imgur.com/gdA4hb2'
+    img_url: 'https://imgur.com/gdA4hb2'
   },
   {
     name: 'Kyle Lowry',
@@ -41,7 +41,7 @@ bartender = Bartender.create(
     bio: "I love music and love to host kareokee! Beer and music are my two loves, I would love to share them with you for your next event",
     skills: ['beer', 'music knowledge'],
     rate: 25,
-    imgUrl: 'https://imgur.com/axeLzMj'
+    img_url: 'https://imgur.com/axeLzMj'
   },
   {
     name: 'Tanya Bullocks',
@@ -52,7 +52,7 @@ bartender = Bartender.create(
     bio: "I love gin and springtime! I have 12 years working in some of the best cocktail bars in the city, and I would love to make your next party a flowery delight!",
     skills: ['gin', 'aromatics', 'infusions', 'vodka', 'aquavit'],
     rate: 40,
-    imgUrl: 'https://imgur.com/f7cI8Pl'
+    img_url: 'https://imgur.com/f7cI8Pl'
   },
   {
     name: 'Flavien Guy',
@@ -63,7 +63,7 @@ bartender = Bartender.create(
     bio: "I know everything french, cognac, wine, and champagne. I bring sophistication and style to everything I do.",
     skills: ['cognac', 'champagne', 'wine', 'style', 'coolness'],
     rate: 100,
-    imgUrl: 'https://imgur.com/N7qyHoc'
+    img_url: 'https://imgur.com/N7qyHoc'
   },
   {
     name: 'Ariele Kramer',
@@ -74,7 +74,7 @@ bartender = Bartender.create(
     bio: "Service industry pro for over 15 years. I've see and done everything, there's nothing I can't handle, I am a master craftswoman that can adjust to anything",
     skills: ['whiskey', 'gin', 'amaro', 'tequila', 'rum'],
     rate: 70,
-    imgUrl: 'https://imgur.com/Mlpmz7L'
+    img_url: 'https://imgur.com/Mlpmz7L'
   },
   {
     name: 'Spike Hammer',
@@ -85,7 +85,7 @@ bartender = Bartender.create(
     bio: "I can juggle and make a drink! Have a boring brunch party that needs a kick, I'm you flairman!",
     skills: ['flair', 'juggling', 'layered shots'],
     rate: 100,
-    imgUrl: 'https://imgur.com/eNeLSaU'
+    img_url: 'https://imgur.com/eNeLSaU'
   },
   {
     name: 'Britney Ocean',
@@ -96,7 +96,7 @@ bartender = Bartender.create(
     bio: "Need a show and some service I'm your lady! I've competed in flair competions from here to vegas, and I can make drink too!",
     skills: ['speed', 'multitasker', 'high-energy', 'fire'],
     rate: 80,
-    imgUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.rimonthly.com%2Fwp-content%2Fuploads%2F2019%2F11%2FN9EC83BAR1.jpg'
+    img_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.rimonthly.com%2Fwp-content%2Fuploads%2F2019%2F11%2FN9EC83BAR1.jpg'
   },
   {
     name: 'Bam Margarita',
@@ -107,7 +107,7 @@ bartender = Bartender.create(
     bio: "Flair Flair Flair Flair Flair Flair Flair Flair Flair Flair Flair Flair Flair Flari",
     skills: ['Flair', 'Flair', 'Flair', 'Flair'],
     rate: 30,
-    imgUrl: 'https://imgur.com/5T405Cq'
+    img_url: 'https://imgur.com/5T405Cq'
   }
 ]
 )
