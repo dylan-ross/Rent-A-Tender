@@ -25,19 +25,14 @@ export default function MainContainer(props) {
     fetchBartenders()
   }, [])
 
-  // useEffect(() => {
-  //   const fetchJobs = async () => {
-  //     const jobsData = await getAllJobs();
-  //     setJobs(jobsData)
-  //   }
-  //   fetchJobs()
-  // }, [])
+  useEffect(() => {
+    const fetchJobs = async () => {
+      const jobsData = await getAllJobs();
+      setJobs(jobsData)
+    }
+    fetchJobs()
+  }, [])
 
-  const handleCreateBartender = async (formData) => {
-    const bartenderData = await postBartender(formData);
-    setBartenders(prevState => [...prevState, bartenderData])
-    history.push('/bartenders/:bartender_id/jobs')
-  }
 
   const handleEditBartender = async (id, formData) => {
     const bartenderData = await putBartender(id, formData);
@@ -47,15 +42,10 @@ export default function MainContainer(props) {
     history.push('bartenders/:bartender_id/jobs')
   }
 
-  // const handleDeleteBartender = async (id) => {
-  //   await deleteBartender(id);
-  //   setBartenders(prevState => prevState.filter(bartender => bartender.id !== id))
-  // }
-
   const handleCreateJob = async (formData) => {
     const jobData = await postJob(formData);
     setJobs(prevState => [...prevState, jobData])
-    history.push('/jobs/:job_id')
+    history.push('/jobs/:id')
   }
 
   const handleEditJob = async (id, formData) => {
@@ -80,23 +70,23 @@ export default function MainContainer(props) {
         <BartenderDetail currentBartender={currentBartender} currentUser={currentUser}/>
       </Route>
       {/* <Route exact path='/bartenders/:id/create_profile'>
-        <BartenderProfileForm bartenders={bartenders} handleCreateBartender={handleCreateBartender}/>
+        <BartenderProfileForm bartenders={bartenders} currentBartender={currentBartender}/>
+      </Route>
+      <Route exact path='/bartenders/:id/edit_profile'>
+        <BartenderProfileForm bartenders={bartenders} currentBartender={currentBartender} handleEditBartender={handleEditBartender}/>
       </Route> */}
-      {/* <Route exact path='/bartenders/:id/edit_profile'>
-        <BartenderProfileForm bartenders={bartenders} handleEditBartender={handleEditBartender}/>
-      </Route> */}
-      <Route exact path='/bartenders/:bartender_id/jobs'>
+      <Route exact path='/bartenders/:id/jobs'>
         <BartenderJobs currentBartender={currentBartender} jobs={jobs} handleDeleteJob={handleDeleteJob}/>
       </Route>
-      <Route exact path='/users/user_:id/jobs/new'>
-        <JobForm currentUser={currentUser} jobs={jobs} handleCreateJob={handleCreateJob} currentBartender={currentBartender }/>
+      <Route exact path='/users/:id/jobs/new'>
+        <JobForm currentUser={currentUser} jobs={jobs} handleCreateJob={handleCreateJob} />
       </Route>
-      {/* <Route exact path='/users/:user_id/jobs'>
-        <UserJobs currentUser={currentUser} jobs={jobs} handleEditJob={handleEditJob} handleDeleteJob={handleDeleteJob}/>
-      </Route> */}
-      {/* <Route exact path='/jobs/:id'>
+      <Route exact path='/users/:user_id/jobs'>
+        <UserJobs currentUser={currentUser} jobs={jobs} setJobs={setJobs}handleEditJob={handleEditJob} handleDeleteJob={handleDeleteJob}/>
+      </Route>
+      <Route exact path='/jobs/:id'>
         <Confirmation currentUser={currentUser} jobs={jobs}/>
-      </Route> */}
+      </Route>
     </Switch>
   )
 }

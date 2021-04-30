@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Home = (props) => {
-  const { bartenders, currentUser } = props;
+  const { bartenders, currentUser, currentBartenders } = props;
   const [queriedBartenders, setQueriedBartenders] = useState([]);
 
   const handleSearch = (event) => {

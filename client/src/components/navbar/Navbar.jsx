@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 export default function Navbar(props) {
   const { currentBartender, currentUser, handleSignOutBartender, handleSignOutUser } = props;
   console.log(props)
-  console.log(props.children)
-  console.log(props.currentBartender)
-  console.log(currentUser)
+  // console.log(handleSignOutBartender)
+  // console.log(handleSignOutUser)
+  // console.log(currentBartender)
+  // console.log(currentUser)
   return (
     <div className="nav">
       <header>
