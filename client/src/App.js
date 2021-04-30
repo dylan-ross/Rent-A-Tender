@@ -55,14 +55,13 @@ function App() {
   const handleSignInBartender = async (formData) => {
     const bartenderData = await signInBartender(formData);
     setCurrentBartender(bartenderData)
-    console.log(bartenderData)
     history.push(`/bartenders/${bartenderData.id}/jobs`)
   }
 
   const handleSignUpBartender = async (formData) => {
     const bartenderData = await signUpBartender(formData);
     setCurrentBartender(bartenderData)
-    history.push('/')
+    history.push(`/bartenders/${bartenderData.id}/jobs`)
   }
 
   const handleSignOutBartender = () => {

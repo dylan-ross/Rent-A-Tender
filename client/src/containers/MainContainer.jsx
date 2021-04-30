@@ -33,11 +33,6 @@ export default function MainContainer(props) {
     fetchJobs()
   }, [])
 
-  const handleCreateBartender = async (formData) => {
-    const bartenderData = await postBartender(formData);
-    setBartenders(prevState => [...prevState, bartenderData])
-    history.push('/bartenders/:bartender_id/jobs')
-  }
 
   const handleEditBartender = async (id, formData) => {
     const bartenderData = await putBartender(id, formData);
@@ -46,11 +41,6 @@ export default function MainContainer(props) {
     }))
     history.push('bartenders/:bartender_id/jobs')
   }
-
-  // const handleDeleteBartender = async (id) => {
-  //   await deleteBartender(id);
-  //   setBartenders(prevState => prevState.filter(bartender => bartender.id !== id))
-  // }
 
   const handleCreateJob = async (formData) => {
     const jobData = await postJob(formData);
@@ -80,10 +70,10 @@ export default function MainContainer(props) {
         <BartenderDetail currentBartender={currentBartender} currentUser={currentUser}/>
       </Route>
       {/* <Route exact path='/bartenders/:id/create_profile'>
-        <BartenderProfileForm bartenders={bartenders} handleCreateBartender={handleCreateBartender}/>
-      </Route> */}
-      {/* <Route exact path='/bartenders/:id/edit_profile'>
-        <BartenderProfileForm bartenders={bartenders} handleEditBartender={handleEditBartender}/>
+        <BartenderProfileForm bartenders={bartenders} currentBartender={currentBartender}/>
+      </Route>
+      <Route exact path='/bartenders/:id/edit_profile'>
+        <BartenderProfileForm bartenders={bartenders} currentBartender={currentBartender} handleEditBartender={handleEditBartender}/>
       </Route> */}
       <Route exact path='/bartenders/:id/jobs'>
         <BartenderJobs currentBartender={currentBartender} jobs={jobs} handleDeleteJob={handleDeleteJob}/>
