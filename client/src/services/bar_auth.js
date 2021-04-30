@@ -1,14 +1,14 @@
 import api from './apiConfig';
 
 export const signInBartender = async (loginData) => {
-  const resp = await api.post('/bar_auth/login', { authentication: loginData })
+  const resp = await api.post('/bar_auth/login', { barAuthentication: loginData })
   localStorage.setItem('authToken', resp.data.token);
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
   return resp.data.bartender
 }
 
 export const signUpBartender = async (registerData) => {
-  const resp = await api.post('/bartenders/', { user: registerData })
+  const resp = await api.post('/bartenders/', { bartender: registerData })
   localStorage.setItem('authToken', resp.data.token);
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
   return resp.data.bartender

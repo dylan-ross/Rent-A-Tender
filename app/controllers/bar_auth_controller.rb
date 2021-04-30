@@ -20,7 +20,7 @@ class BarAuthController < ApplicationController
   end
 
   def login_params
-    params.require(:authentication).permit(:name, :password)
+    params.require(:barAuthentication).permit(:name, :password)
   end
 
 end

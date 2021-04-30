@@ -1,9 +1,12 @@
 import "./Navbar.css"  
 import { Link } from 'react-router-dom';
 
-export default function Layout(props) {
+export default function Navbar(props) {
   const { currentBartender, currentUser, handleSignOutBartender, handleSignOutUser } = props;
   console.log(props)
+  console.log(props.children)
+  console.log(props.currentBartender)
+  console.log(currentUser)
   return (
     <div className="nav">
       <header>

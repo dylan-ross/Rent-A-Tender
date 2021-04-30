@@ -7,8 +7,8 @@ import { bartenders, currentUser } from "../../services/bartenders";
 const Bartenders = (props) => {
   const [queriedBartenders, setQueriedBartenders] = useState([]);
   const { bartenders } = props;
-  console.log(props)
-  
+  // console.log(bartenders);
+
   const handleSearch = (event) => {
     const newQueriedBartenders = bartenders.filter((bartender) =>
       bartender.name.toLowerCase().includes(event.target.value.toLowerCase())
@@ -19,9 +19,9 @@ const Bartenders = (props) => {
   if (!bartenders) {
     return (
       <>
-        <h3>Hello</h3>
+        <h3>No bartenders</h3>
       </>
-    );
+    )
   }
 
   const bartendersJSX = queriedBartenders.map((bartender, index) => (
@@ -40,14 +40,13 @@ const Bartenders = (props) => {
   const handleSubmit = (event) => event.preventDefault();
 
   return (
-
-      <div className="bartender-screen-container">
-        <div className="header">
-          <h3 className="bartenders-title">Bartenders</h3>
-          <Search onSubmit={handleSubmit} onChange={handleSearch} />
-        </div>
-        {bartendersJSX}
+    <div className="bartender-screen-container">
+      <div className="header">
+        <h3 className="bartenders-title">Bartenders</h3>
+        <Search onSubmit={handleSubmit} onChange={handleSearch} />
       </div>
+      {bartendersJSX}
+    </div>
   );
 };
 

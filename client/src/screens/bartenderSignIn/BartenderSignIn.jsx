@@ -9,7 +9,7 @@ export default function BartenderSignIn(props) {
   })
   const { name, password } = formData;
   const { handleSignInBartender, currentBartender } = props;
-  console.log(currentBartender)
+  // console.log(currentBartender)
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({

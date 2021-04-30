@@ -68,11 +68,11 @@ function App() {
     localStorage.removeItem('authToken');
     removeToken();
   }
-
-
+  console.log(currentBartender)
+  console.log(currentUser)
   return (
     <div className="App">
-      <Layout currentBartender={setCurrentBartender} currentUser={currentUser} handleSignOutBartender={handleSignOutBartender} handleSignOutUser={handleSignOutUser}>
+      <Layout currentBartender={currentBartender} currentUser={currentUser} handleSignOutBartender={handleSignOutBartender} handleSignOutUser={handleSignOutUser}>
         <Switch>
           <Route exact path='/user_signin'>
             <UserSignIn handleSignInUser={handleSignInUser} />
