@@ -3,11 +3,12 @@ import { useEffect, useState } from 'react';
 import { useHistory, Route, Switch } from 'react-router-dom';
 import Layout from './components/layout/Layout1';
 import UserSignIn from './screens/userSignIn/UserSignIn';
-import UserSignUp from './screens/userSignUp/UserSignUp';
+import UserSignUp from './screens/userSignUp/UserSignUp1';
 import BartenderSignIn from './screens/bartenderSignIn/BartenderSignIn';
 import BartenderSignUp from './screens/bartenderSignUp/BartenderSignUp1';
 import Home from './screens/home/Home'
-import { signInUser, signUpUser, removeToken, verifyUser, signInBartender, signUpBartender, verifyBartender } from '../src/services/auth';
+import { signInUser, signUpUser, verifyUser, removeToken } from '../src/services/auth';
+import { signInBartender, signUpBartender, verifyBartender, removeBarToken } from '../src/services/bar_auth';
 import MainContainer from './containers/MainContainer';
 
 function App() {
@@ -67,11 +68,11 @@ function App() {
     localStorage.removeItem('authToken');
     removeToken();
   }
-
-
+  console.log(currentBartender)
+  console.log(currentUser)
   return (
     <div className="App">
-      <Layout currentBartender={setCurrentBartender} currentUser={currentUser} handleSignOutBartender={handleSignOutBartender} handleSignOutUser={handleSignOutUser}>
+      <Layout currentBartender={currentBartender} currentUser={currentUser} handleSignOutBartender={handleSignOutBartender} handleSignOutUser={handleSignOutUser}>
         <Switch>
           <Route exact path='/user_signin'>
             <UserSignIn handleSignInUser={handleSignInUser} />
@@ -80,7 +81,7 @@ function App() {
             <UserSignUp handleSignUpUser={handleSignUpUser} />
           </Route>
           <Route exact path='/bartender_signin'>
-            <BartenderSignIn handleSignInBartender={handleSignInBartender} />
+            <BartenderSignIn currentBartender={currentBartender} handleSignInBartender={handleSignInBartender} />
           </Route>
           <Route exact path='/bartender_signup'>
             <BartenderSignUp handleSignUpBartender={handleSignUpBartender} />
