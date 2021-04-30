@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     if @user.save
       @token = encode({ id: @user.id })
       render json: {
-        user: @user.attributes.except("password_digest"),
+        user: @user.as_json(except: "password_digest", include: :jobs),      
         token: @token
         }, status: :created
     else

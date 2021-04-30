@@ -7,7 +7,7 @@ class BarAuthController < ApplicationController
     if @bartender.authenticate(login_params[:password]) #authenticate method provided by Bcrypt and 'has_secure_password'
       token = encode({id: @bartender.id})
       render json: {
-        user: @bartender.attributes.except("password_digest"),
+        bartender: @bartender.as_json(except: "password_digest", include: :jobs),
         token: token
         }, status: :ok
     else
@@ -16,7 +16,9 @@ class BarAuthController < ApplicationController
   end
 
   def bartender_verify
-    render json: @current_bartender.attributes.except("password_digest"), status: :ok
+    render json: {
+      bartender: @bartender.as_json(except: "password_digest", include: :jobs)
+    }, status: :ok
   end
 
   def login_params

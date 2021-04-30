@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :jobs, shallow: true
   end
 
+  resources :jobs
+
   resources :bartenders do
     resources :jobs, shallow: true
   end

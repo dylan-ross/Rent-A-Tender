@@ -49,12 +49,14 @@ function App() {
     setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
+    history.push('/')
   }
 
   const handleSignInBartender = async (formData) => {
     const bartenderData = await signInBartender(formData);
     setCurrentBartender(bartenderData)
-    history.push('/')
+    console.log(bartenderData)
+    history.push(`/bartenders/${bartenderData.id}/jobs`)
   }
 
   const handleSignUpBartender = async (formData) => {
@@ -64,12 +66,12 @@ function App() {
   }
 
   const handleSignOutBartender = () => {
-    setCurrentUser(null);
+    setCurrentBartender(null);
     localStorage.removeItem('authToken');
-    removeToken();
+    removeBarToken();
+    history.push('/')
   }
-  console.log(currentBartender)
-  console.log(currentUser)
+
   return (
     <div className="App">
       <Layout currentBartender={currentBartender} currentUser={currentUser} handleSignOutBartender={handleSignOutBartender} handleSignOutUser={handleSignOutUser}>
@@ -87,7 +89,7 @@ function App() {
             <BartenderSignUp handleSignUpBartender={handleSignUpBartender} />
           </Route>
           <Route exact path='/'> 
-            <Home/>
+            <Home currentUser={currentUser} currentBartender={currentBartender}/>
           </Route>
           <Route path='/'>
             <MainContainer currentUser={currentUser} currentBartender={currentBartender} />
