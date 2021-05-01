@@ -1,5 +1,25 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: main;
+  src: url("https://fonts.googleapis.com/css?family=Cormorant");
 }
+
+:root {
+  --main-bg-color: #F3A42D;
+  --secondary-bg-color: #EDE2D2;
+  --accent-color: #7C7C7C;
+}
+
+.App {
+  height: 100vh;
+  font-family: main;
+  text-align: center;
+  background: var(--main-bg-color) url("../src/assets/images/bartender.png") 100% 100% no-repeat;
+}
+
+button {
+  font-family: main;
+}
+
+
 
 
