@@ -20,6 +20,11 @@ button {
   font-family: main;
 }
 
+form {
+  background: var(--secondary-bg-color);
+  width: 30%;
+}
+
 
 
 

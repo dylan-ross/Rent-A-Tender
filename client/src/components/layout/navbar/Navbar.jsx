@@ -1,15 +1,18 @@
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
 
 export default function Navbar(props) {
+  const params = useParams()
+  const { id } = params
+  // console.log(params)
   const {
     currentBartender,
     currentUser,
     handleSignOutBartender,
     handleSignOutUser,
   } = props;
-  console.log(props);
+  // console.log(props);
 
   // console.log(handleSignOutBartender)
   // console.log(handleSignOutUser)
@@ -17,16 +20,18 @@ export default function Navbar(props) {
   // console.log(currentUser)
   return (
     <div className="nav">
-      <Link to="/">
-        <img src={logo} alt="Rent-A-Tender" width="20%" />
+      <Link className="logo" to="/">
+        <img src={logo} alt="Rent-A-Tender" width="50%" />
       </Link>
       {currentUser ? (
-        <div>
+        <div className="current-user-nav">
           <p>{currentUser.username}</p>
+          <Link to={`/users/user/jobs`}>Upcoming Events</Link>
           <button onClick={handleSignOutUser}>Logout</button>
         </div>
       ) : (
         <div className="user-signin-signup">
+          <Link to="/bartender_signin">Bartend</Link>
           <Link to="/user_signin">Sign In</Link>
           <Link to="/user_signup">Join</Link>
         </div>
@@ -40,12 +45,11 @@ export default function Navbar(props) {
       ) : (
         <Link to="/bartender_signin">Bartend</Link>
       )}
-      {currentUser && (
-        <>
-          <Link to="/foods">Upcoming Events</Link>
-          <Link to="/flavors">Flavors</Link>
-        </>
-      )}
+      {/* {currentUser && (
+        <div>
+          <Link to="/user/jobs">Upcoming Events</Link>
+        </div>
+      )} */}
     </div>
   );
 }
