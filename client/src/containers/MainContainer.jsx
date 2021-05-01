@@ -78,7 +78,7 @@ export default function MainContainer(props) {
       <Route exact path='/bartenders/:id/jobs'>
         <BartenderJobs currentBartender={currentBartender} jobs={jobs} handleDeleteJob={handleDeleteJob}/>
       </Route>
-      <Route exact path='/users/:id/jobs/new'>
+      <Route exact path='/bartenders/:id/jobs/new'>
         <JobForm currentUser={currentUser} jobs={jobs} handleCreateJob={handleCreateJob} />
       </Route>
       <Route exact path='/users/:user_id/jobs'>

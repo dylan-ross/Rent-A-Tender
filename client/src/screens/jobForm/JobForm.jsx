@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 const JobForm = (props) => {
   console.log(props);
+  const params = useParams()
+  const { id } = params
   const [formData, setFormData] = useState({
     date: '',
     start_time:'',
@@ -24,7 +26,7 @@ const JobForm = (props) => {
       <h2>JobForm</h2>
       <form  onSubmit={(e) => {
         e.preventDefault();
-        handleCreateJob(formData);
+        handleCreateJob({ ...formData, bartender_id: id });
       }}>
         <input type="date" name="date" value={date} onChange={handleChange}/>
         <input type="time" name="start_time" value={start_time } onChange={handleChange}/>
