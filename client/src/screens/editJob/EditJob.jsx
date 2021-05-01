@@ -1,17 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"
 
-const JobForm = (props) => {
-  console.log(props);
-  const params = useParams()
-  const { id } = params
+const EditJob = (props) => {
   const [formData, setFormData] = useState({
     date: '',
     start_time:'',
     end_time: ''
   })
-  const { handleCreateJob } = props
+
+  const params = useParams()
+  const { id } = params
+  const { jobs, handleEditJob } = props
   const { date, start_time, end_time } = formData;
+
+  useEffect(() => {
+    const prefillFormData = () => {
+      const jobItem = jobs.find(job => job.id === Number(id))
+      setFormData({
+        date: jobItem.date,
+        start_time: jobItem.start_time,
+        end_time: jobItem.end_time,
+      })
+    }
+    if (jobs.length) {
+      prefillFormData()
+    }
+  }, [jobs])
+
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,7 +42,7 @@ const JobForm = (props) => {
       <h2>JobForm</h2>
       <form  onSubmit={(e) => {
         e.preventDefault();
-        handleCreateJob({ ...formData, bartender_id: id });
+        handleEditJob(id, formData);
       }}>
         <input type="date" name="date" value={date} onChange={handleChange}/>
         <input type="time" name="start_time" value={start_time } onChange={handleChange}/>
@@ -37,4 +53,4 @@ const JobForm = (props) => {
   );
 };
 
-export default JobForm;
+export default EditJob;
