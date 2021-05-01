@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Bartender.destroy_all
 User.destroy_all
+Job.destroy_all
+
 
 bartender = Bartender.create(
   [
@@ -126,3 +128,8 @@ user = User.create(
     }
   ]
 )
+
+@user = User.create!(username: 'topaz', email: 'topaz@email.com', password: '123456')
+@bartender = Bartender.create!(name: 'Joe Jack', email: 'joe@jack.com', password: '987654321', category: 'Flair', intro: 'I love you guys', bio: 'love', skills: 'bottle flippin', rate: 37, img_url: 'https://imgur.com/888GFRw')
+@time = Time.new
+Job.create!(bartender: @bartender, user: @user, date: @time.strftime("%Y-%-m-%-d"), start_time: @time.strftime("%d.%m"), end_time: @time.strftime("%d.%m"))

@@ -5,11 +5,11 @@ const JobForm = (props) => {
   console.log(props);
   const [formData, setFormData] = useState({
     date: '',
-    startTime:'',
-    endTime: ''
+    start_time:'',
+    end_time: ''
   })
   const { handleCreateJob } = props
-  const { date, startTime, endTime } = formData;
+  const { date, start_time, end_time } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,8 +27,8 @@ const JobForm = (props) => {
         handleCreateJob(formData);
       }}>
         <input type="date" name="date" value={date} onChange={handleChange}/>
-        <input type="time" name="startTime" value={startTime } onChange={handleChange}/>
-        <input type="time" name="endTime" value={endTime} onChange={handleChange}/>
+        <input type="time" name="start_time" value={start_time } onChange={handleChange}/>
+        <input type="time" name="end_time" value={end_time} onChange={handleChange}/>
         <button>Confirm</button>
       </form>
     </div>

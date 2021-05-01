@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_action :authorize_request, only: [:create, :update, :destroy]
+  before_action :authorize_user_request, only: [:update, :destroy]
   before_action :set_job, only: [:show, :update, :destroy]
   before_action :set_user_job, only: [:update, :destroy]
   before_action :set_bartender_job, only: :destroy

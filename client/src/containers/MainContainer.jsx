@@ -34,13 +34,13 @@ export default function MainContainer(props) {
   }, [])
 
 
-  const handleEditBartender = async (id, formData) => {
-    const bartenderData = await putBartender(id, formData);
-    setBartenders(prevState => prevState.map(bartender => {
-      return bartenderData.id === Number(id) ? bartenderData : bartender
-    }))
-    history.push('bartenders/:bartender_id/jobs')
-  }
+  // const handleEditBartender = async (id, formData) => {
+  //   const bartenderData = await putBartender(id, formData);
+  //   setBartenders(prevState => prevState.map(bartender => {
+  //     return bartenderData.id === Number(id) ? bartenderData : bartender
+  //   }))
+  //   history.push('bartenders/:bartender_id/jobs')
+  // }
 
   const handleCreateJob = async (formData) => {
     const jobData = await postJob(formData);
