@@ -1,7 +1,11 @@
-const UserJobs = () => {
+const UserJobs = (props) => {
+  console.log(props)
   return (
-    <h2>User Jobs</h2>
-  )
-}
+    <div>
+      <h2>User Jobs</h2>
 
-export default UserJobs
+    </div>
+  );
+};
+
+export default UserJobs;

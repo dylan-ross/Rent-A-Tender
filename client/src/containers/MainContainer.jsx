@@ -34,13 +34,13 @@ export default function MainContainer(props) {
   }, [])
 
 
-  const handleEditBartender = async (id, formData) => {
-    const bartenderData = await putBartender(id, formData);
-    setBartenders(prevState => prevState.map(bartender => {
-      return bartenderData.id === Number(id) ? bartenderData : bartender
-    }))
-    history.push('bartenders/:bartender_id/jobs')
-  }
+  // const handleEditBartender = async (id, formData) => {
+  //   const bartenderData = await putBartender(id, formData);
+  //   setBartenders(prevState => prevState.map(bartender => {
+  //     return bartenderData.id === Number(id) ? bartenderData : bartender
+  //   }))
+  //   history.push('bartenders/:bartender_id/jobs')
+  // }
 
   const handleCreateJob = async (formData) => {
     const jobData = await postJob(formData);
@@ -82,7 +82,7 @@ export default function MainContainer(props) {
         <JobForm currentUser={currentUser} jobs={jobs} handleCreateJob={handleCreateJob} />
       </Route>
       <Route exact path='/users/:user_id/jobs'>
-        <UserJobs currentUser={currentUser} jobs={jobs} setJobs={setJobs}handleEditJob={handleEditJob} handleDeleteJob={handleDeleteJob}/>
+        <UserJobs currentUser={currentUser} jobs={jobs} handleEditJob={handleEditJob} handleDeleteJob={handleDeleteJob}/>
       </Route>
       <Route exact path='/jobs/:id'>
         <Confirmation currentUser={currentUser} jobs={jobs}/>
