@@ -23,25 +23,20 @@ export default function UserSignIn(props) {
       handleSignInUser(formData)
     }}>
       <h3>Sign In</h3>
-      <label>
-        Username:
         <input
           type='text'
           name='username'
           value={username}
+          placeholder="username"
           onChange={handleChange}
         />
-      </label>
       <br />
-      <label>
-        Password:
         <input
           type='password'
           name='password'
           value={password}
           onChange={handleChange}
         />
-      </label>
       <br />
       <Link to='/user_signup'>Sign Up</Link>
       <button>Submit</button>

@@ -15,7 +15,7 @@ export const signUpBartender = async (registerData) => {
 }
 
 export const verifyBartender = async () => {
-  const token = localStorage.getItem('authToken');
+  const token = localStorage.getItem('barAuthToken');
   if (token) {
     api.defaults.headers.common.authorization = `Bearer ${token}`
     const resp = await api.get('/bar_auth/verify');

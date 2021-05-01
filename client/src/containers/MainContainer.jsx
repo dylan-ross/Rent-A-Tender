@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import Bartenders from '../screens/bartenders/Bartenders';
 import BartenderDetail from '../screens/bartenderDetail/BartenderDetail';
-import BartenderProfileForm from '../screens/bartenderProfileForm/BartenderProfileForm';
+// import BartenderProfileForm from '../screens/bartenderProfileForm/BartenderProfileForm';
 import BartenderJobs from '../screens/bartenderJobs/BartenderJobs';
 import Confirmation from '../screens/confirmation/Confirmation';
 import UserJobs from '../screens/userJobs/UserJobs';
-import JobForm from '../screens/jobForm/JobForm';
+import CreateJob from '../screens/createJob/CreateJob';
+import EditJob from '../screens/editJob/EditJob'
 
 import { getAllJobs, postJob, putJob, deleteJob, } from '../services/jobs';
 import { getAllBartenders, postBartender, putBartender} from '../services/bartenders';
@@ -53,12 +54,13 @@ export default function MainContainer(props) {
     setJobs(prevState => prevState.map(job => {
       return jobData.id === Number(id) ? jobData : job
     }))
-    history.push('/jobs/:job_id')
+    history.push('/users/user/jobs')
   }
 
   const handleDeleteJob = async (id) => {
     await deleteJob(id);
     setJobs(prevState => prevState.filter(job => job.id !== id))
+    history.push('/users/user/jobs')
   }
 
   return (
@@ -78,14 +80,17 @@ export default function MainContainer(props) {
       <Route exact path='/bartenders/:id/jobs'>
         <BartenderJobs currentBartender={currentBartender} jobs={jobs} handleDeleteJob={handleDeleteJob}/>
       </Route>
-      <Route exact path='/users/:id/jobs/new'>
-        <JobForm currentUser={currentUser} jobs={jobs} handleCreateJob={handleCreateJob} />
+      <Route exact path='/bartenders/:id/jobs/new'>
+        <CreateJob currentUser={currentUser} jobs={jobs} handleCreateJob={handleCreateJob} />
       </Route>
-      <Route exact path='/users/:user_id/jobs'>
+      <Route exact path='/users/user/jobs'>
         <UserJobs currentUser={currentUser} jobs={jobs} handleEditJob={handleEditJob} handleDeleteJob={handleDeleteJob}/>
       </Route>
       <Route exact path='/jobs/:id'>
         <Confirmation currentUser={currentUser} jobs={jobs}/>
+      </Route>
+      <Route exact path='/jobs/:id/edit'>
+        <EditJob currentUser={currentUser} jobs={jobs} handleEditJob={handleEditJob} handleDeleteJob={handleDeleteJob}/>
       </Route>
     </Switch>
   )

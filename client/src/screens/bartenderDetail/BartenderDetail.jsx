@@ -33,7 +33,7 @@ const BartenderDetail = (props) => {
         </div>
       </div>
       <div className="detail-buttons">
-        <Link to={`/users/${currentUser?.id}/jobs/new`}><button>Book</button></Link>
+        <Link to={`/bartenders/${id}/jobs/new`}><button>Book</button></Link>
         <Link to={'/bartenders'}><button>Back</button></Link>
       </div>
     </div>

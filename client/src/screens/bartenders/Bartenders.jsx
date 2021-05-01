@@ -7,7 +7,7 @@ import { bartenders, currentUser } from "../../services/bartenders";
 const Bartenders = (props) => {
   const [queriedBartenders, setQueriedBartenders] = useState([]);
   const { bartenders } = props;
-  // console.log(bartenders);
+  console.log(bartenders);
 
   const handleSearch = (event) => {
     const newQueriedBartenders = bartenders.filter((bartender) =>
@@ -47,7 +47,7 @@ const Bartenders = (props) => {
       </div>
       {bartendersJSX}
     </div>
-  );
+  )
 };
 
 export default Bartenders;
