@@ -18,7 +18,7 @@ class JobsController < ApplicationController
   # POST /jobs
   def create
     @job = Job.new(job_params)
-
+    
     if @job.save
       render json: @job, status: :created
     else

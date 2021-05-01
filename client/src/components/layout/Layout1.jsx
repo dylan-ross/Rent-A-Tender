@@ -1,5 +1,5 @@
 import "./Layout.css";
-import Navbar from "../navbar/Navbar";
+import Navbar from "./navbar/Navbar";
 
 const Layout = (props) => {
   console.log(props);
