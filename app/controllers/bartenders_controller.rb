@@ -42,6 +42,11 @@ class BartendersController < ApplicationController
     @bartender.destroy
   end
 
+  # def show_by_category
+  #   @bartender_category = Bartender.where(category: params[:category])
+  #   render json: @bartender_category
+  # end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bartender

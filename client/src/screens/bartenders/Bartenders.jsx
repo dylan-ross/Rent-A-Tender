@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Bartenders.css";
 import Search from "../../components/search/Search";
-import { bartenders, currentUser } from "../../services/bartenders";
+// import { bartenders, currentUser } from "../../services/bartenders";
 
 const Bartenders = (props) => {
   const [queriedBartenders, setQueriedBartenders] = useState([]);
   const { bartenders } = props;
-  console.log(bartenders);
 
   const handleSearch = (event) => {
     const newQueriedBartenders = bartenders.filter((bartender) =>
@@ -21,7 +20,7 @@ const Bartenders = (props) => {
       <>
         <h3>No bartenders</h3>
       </>
-    )
+    );
   }
 
   const bartendersJSX = queriedBartenders.map((bartender, index) => (
@@ -31,6 +30,7 @@ const Bartenders = (props) => {
           className="bartender-image"
           src={bartender.img_url}
           alt={bartender.name}
+          width="20%"
         />
         <h3 className="bartender-name">{bartender.name}</h3>
       </Link>
@@ -45,9 +45,9 @@ const Bartenders = (props) => {
         <h3 className="bartenders-title">Bartenders</h3>
         <Search onSubmit={handleSubmit} onChange={handleSearch} />
       </div>
-      {bartendersJSX}
+      <div>{bartendersJSX}</div>
     </div>
-  )
+  );
 };
 
 export default Bartenders;

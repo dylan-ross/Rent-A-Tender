@@ -21,7 +21,7 @@ bartender = Bartender.create(
     bio: "I've worked in every type of bar and delt with every personality. I can handle the rowdiest of crowds. Perfect for Super Bowl parties.",
     skills: ['shots! shots! shots!', 'speed', 'crowd control',],
     rate: 20,
-    img_url: 'https://imgur.com/888GFRw'
+    img_url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.wisegeek.com%2Fbartender-serving-draught-beer-in-bar.jpg&f=1&nofb=1'
   },
   {
     name: 'Kim Thanks',

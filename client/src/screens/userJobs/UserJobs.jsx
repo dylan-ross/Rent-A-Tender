@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
-
+import dateFormat from "dateformat"
 const UserJobs = (props) => {
   console.log(props);
-  const { currentUser, handleDeleteJob} = props;
-  const jobs = currentUser.jobs;
+  const { currentUser, handleDeleteJob, jobs} = props;
+  // const jobs = currentUser.jobs;
   console.log(jobs);
   return (
     <div>
@@ -11,8 +11,8 @@ const UserJobs = (props) => {
       {jobs.map((job) => (
         <div key={job.id}>
           <p>{job.id}</p>
-          <p>date: {job.date}</p>
-          <p>start: {job.start_time}</p>
+          <p>date: {job.date.toLocaleString(undefined, '%d-%b-%Y')}</p>
+          <p>start: {job.start_time.split("")}</p>
           <p> end: {job.end_time}</p>
           <Link to={`/jobs/${job.id}/edit`}><button>Edit</button></Link>
           <Link><button onClick={() => handleDeleteJob(job.id)}>Delete</button></Link>
