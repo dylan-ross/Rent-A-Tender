@@ -18,7 +18,6 @@ export default function BartenderSignUp(props) {
     img_url,
   } = formData;
   const { handleSignUpBartender } = props;
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -60,15 +59,6 @@ export default function BartenderSignUp(props) {
         <option>Cocktail</option>
         <option>Flair</option>
       </select>
-      {/* <label>
-        Category:
-        <input
-          type="text"
-          name="category"
-          value={category}
-          onChange={handleChange}
-        />
-      </label> */}
       <br />
       <label>
         Intro:

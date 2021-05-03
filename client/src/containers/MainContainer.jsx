@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import Home from "../screens/home/Home";
 import Bartenders from "../screens/bartenders/Bartenders";
-import Category from "../screens/category/Category"
+import Category from "../screens/category/Category";
 import BartenderDetail from "../screens/bartenderDetail/BartenderDetail";
 import BartenderJobs from "../screens/bartenderJobs/BartenderJobs";
 import Confirmation from "../screens/confirmation/Confirmation";
@@ -17,7 +17,7 @@ export default function MainContainer(props) {
   const [bartenderList, setBartenderList] = useState([]);
   const [jobs, setJobs] = useState([]);
   const history = useHistory();
-;  const { currentUser, currentBartender } = props;
+  const { currentUser, currentBartender } = props;
 
   useEffect(() => {
     const fetchBartenders = async () => {
@@ -29,10 +29,11 @@ export default function MainContainer(props) {
     fetchBartenders();
   }, []);
 
-  const fetchJobs = async () => {
-    const jobsData = await getAllJobs();
-    setJobs(jobsData);
-  };
+  // const fetchJobs = async () => {
+  //   const jobsData = await getAllJobs();
+  //   setJobs(jobsData);
+  // };
+  // fetchJobs();
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -55,7 +56,7 @@ export default function MainContainer(props) {
         return jobData.id === Number(id) ? jobData : job;
       })
     );
-    fetchJobs();
+    // fetchJobs();
     history.push("/user/events");
   };
 
