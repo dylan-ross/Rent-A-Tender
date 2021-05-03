@@ -1,12 +1,11 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import { useHistory, Route, Switch } from 'react-router-dom';
-import Layout from './components/layout/Layout1';
+import Layout from './components/layout/Layout';
 import UserSignIn from './screens/userSignIn/UserSignIn';
 import UserSignUp from './screens/userSignUp/UserSignUp1';
 import BartenderSignIn from './screens/bartenderSignIn/BartenderSignIn';
 import BartenderSignUp from './screens/bartenderSignUp/BartenderSignUp1';
-import Home from './screens/home/Home'
 import { signInUser, signUpUser, verifyUser, removeToken } from '../src/services/auth';
 import { signInBartender, signUpBartender, verifyBartender, removeBarToken } from '../src/services/bar_auth';
 import MainContainer from './containers/MainContainer';

@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import "./BartenderDetail.css";
-import { useHistory, useParams, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getOneBartender } from "../../services/bartenders";
 
 const BartenderDetail = (props) => {
   const [bartenderItem, setBartenderItem] = useState(null);
   const { id } = useParams();
-  const { currentUser } = props;
-  console.log(props)
+  // const { currentUser } = props;
+  // console.log(currentUser)
   useEffect(() => {
     const fetchBartender = async () => {
       const bartenderData = await getOneBartender(id);
       setBartenderItem(bartenderData);
     };
     fetchBartender();
-  }, []);
+  }, [id]);
   console.log(bartenderItem)
   return (
     <div className="bartender-detail">
