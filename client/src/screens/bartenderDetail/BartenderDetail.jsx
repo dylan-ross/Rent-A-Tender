@@ -6,8 +6,7 @@ import { getOneBartender } from "../../services/bartenders";
 const BartenderDetail = (props) => {
   const [bartenderItem, setBartenderItem] = useState(null);
   const { id } = useParams();
-  // const { currentUser } = props;
-  // console.log(currentUser)
+  const { currentUser } = props;
   useEffect(() => {
     const fetchBartender = async () => {
       const bartenderData = await getOneBartender(id);
@@ -33,10 +32,11 @@ const BartenderDetail = (props) => {
           <h3 className="bartender-detail-price">{bartenderItem?.rate}</h3>
         </div>
       </div>
+      {currentUser &&
       <div className="detail-buttons">
         <Link to={`/bartenders/${id}/jobs/new`}><button>Book</button></Link>
         <Link to={'/bartenders'}><button>Back</button></Link>
-      </div>
+      </div>}
     </div>
   );
 };
