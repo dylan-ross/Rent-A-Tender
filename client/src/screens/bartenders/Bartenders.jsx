@@ -7,7 +7,7 @@ import Search from "../../components/search/Search";
 const Bartenders = (props) => {
   const [queriedBartenders, setQueriedBartenders] = useState([]);
   const { bartenders } = props;
-
+  console.log(bartenders)
   const handleSearch = (event) => {
     const newQueriedBartenders = bartenders.filter((bartender) =>
       bartender.name.toLowerCase().includes(event.target.value.toLowerCase())

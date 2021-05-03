@@ -105,7 +105,7 @@ export default function BartenderSignUp(props) {
         <input
           type="number"
           name="category"
-          value={category}
+          value={rate}
           onChange={handleChange}
         />
       </label>
