@@ -25,6 +25,7 @@ export default function Bartenders(props) {
         />
         <h3 className="bartender-name">{bartender.name}</h3>
         <h3 className="bartender-rate">{bartender.rate}</h3>
+        <h3 className="bartneder-category">bartender.category</h3>
       </Link>
     </div>
   ));
