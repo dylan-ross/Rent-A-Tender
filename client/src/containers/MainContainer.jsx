@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
-import Home from "../screens/home/Home"
+import Home from "../screens/home/Home";
 import Bartenders from "../screens/bartenders/Bartenders";
 import BartenderDetail from "../screens/bartenderDetail/BartenderDetail";
 // import BartenderProfileForm from '../screens/bartenderProfileForm/BartenderProfileForm';
@@ -9,20 +9,20 @@ import Confirmation from "../screens/confirmation/Confirmation";
 import UserJobs from "../screens/userJobs/UserJobs";
 import CreateJob from "../screens/createJob/CreateJob";
 import EditJob from "../screens/editJob/EditJob";
-import Category from "../screens/category/Category";
-
+// import Category from "../screens/category/Category";
+// import Search from "../components/search/Search";
 import { getAllJobs, postJob, putJob, deleteJob } from "../services/jobs";
 import {
   getAllBartenders,
-  postBartender,
-  putBartender,
+  // postBartender,
+  // putBartender,
 } from "../services/bartenders";
 
 export default function MainContainer(props) {
   const [bartenders, setBartenders] = useState([]);
   const [jobs, setJobs] = useState([]);
   const history = useHistory();
-  const { currentUser, currentBartender, verify } = props;
+  const { currentUser, currentBartender, queriedBartendrs } = props;
 
   useEffect(() => {
     const fetchBartenders = async () => {
@@ -32,14 +32,16 @@ export default function MainContainer(props) {
     fetchBartenders();
   }, []);
 
-
   const fetchJobs = async () => {
     const jobsData = await getAllJobs();
     setJobs(jobsData);
   };
 
   useEffect(() => {
- 
+    const fetchJobs = async () => {
+      const jobsData = await getAllJobs();
+      setJobs(jobsData);
+    };
     fetchJobs();
   }, []);
 
@@ -59,22 +61,12 @@ export default function MainContainer(props) {
 
   const handleEditJob = async (id, formData) => {
     const jobData = await putJob(id, formData);
-    // console.log(jobs)
-    // let targetJob = jobs.find(job => job.id == id)
-    // const updatedJob = { ...targetJob, ...formData }
-    // const index = jobs.indexOf(targetJob)
-    // jobs[index] = updatedJob
-    // targetJob = updatedJob
-    // console.log(targetJob)
-    // setJobs(jobs)
-    // console.log(jobs)
-    // setJobs((prevState) =>
-    //   prevState.map((job) => {
-    //     return jobData.id === Number(id) ? jobData : job;
-    //   })
-    // );
-    // verify()
-    fetchJobs()
+    setJobs((prevState) =>
+      prevState.map((job) => {
+        return jobData.id === Number(id) ? jobData : job;
+      })
+    );
+    fetchJobs();
     history.push("/user/jobs");
   };
 
@@ -87,7 +79,12 @@ export default function MainContainer(props) {
   return (
     <Switch>
       <Route exact path="/">
-        <Home currentUser={currentUser} currentBartender={currentBartender} bartenders={bartenders}/>
+        <Home
+          currentUser={currentUser}
+          currentBartender={currentBartender}
+          bartenders={bartenders}
+          queriedBartenders={queriedBartendrs}
+        />
       </Route>
       <Route exact path="/bartenders">
         <Bartenders bartenders={bartenders} currentUser={currentUser} />
