@@ -10,17 +10,3 @@ export const getOneBartender = async (id) => {
   return resp.data;
 };
 
-export const postBartender = async (bartenderData) => {
-  const resp = await api.post("/bartender", { bartender: bartenderData });
-  return resp.data;
-};
-
-export const putBartender = async (id, bartenderData) => {
-  const resp = await api.put(`/jobs/${id}`, { bartender: bartenderData });
-  return resp.data;
-};
-
-export const bartenderCategory = async (category) => {
-  const resp = await api.get(`/bartenders/${category}`);
-  return resp;
-};

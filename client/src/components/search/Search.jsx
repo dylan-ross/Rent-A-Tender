@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Search.css";
 
-const Search = (props) => {
-  console.log(props);
+export default function Search(props) {
+  console.log(props)
   return (
     <div className="search-container">
       <label className="search" htmlFor="search-input">
@@ -17,12 +17,11 @@ const Search = (props) => {
           type="text"
           autoFocus
         />
-        <Link to="/bartenders">
+        {/* <Link to="/bartenders">
           <button>Search</button>
-        </Link>
+        </Link> */}
       </label>
     </div>
   );
 };
 
-export default Search;
