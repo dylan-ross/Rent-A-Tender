@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Bartenders.css";
 
 export default function Bartenders(props) {
-  const { bartenders } = props;
+  const { bartenders, currentUser } = props;
   console.log(bartenders);
 
   if (!bartenders) {
@@ -14,19 +13,20 @@ export default function Bartenders(props) {
     );
   }
 
-  const bartendersJSX = bartenders.map((bartender, index) => (
+  const bartendersJSX = bartenders.map((bartender) => (
     <div className="bartender">
-      <Link to={`/bartenders/${bartender.id}`}>
-        <img
-          className="bartender-image"
-          src={bartender.img_url}
-          alt={bartender.name}
-          width="70%"
-        />
-        <h3 className="bartender-name">{bartender.name}</h3>
-        <h3 className="bartender-rate">{bartender.rate}</h3>
-        <h3 className="bartneder-category">bartender.category</h3>
-      </Link>
+      
+        <Link to={`/bartenders/${bartender.id}`}>
+          <img
+            className="bartender-image"
+            src={bartender.img_url}
+            alt={bartender.name}
+            width="70%"
+          />
+          <h3 className="bartender-name">{bartender.name}</h3>
+          <h3 className="bartender-rate">{bartender.rate}</h3>
+          <h3 className="bartneder-category">{bartender.category}</h3>
+        </Link>
     </div>
   ));
 
