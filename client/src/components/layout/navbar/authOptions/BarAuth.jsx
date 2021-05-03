@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function BarAuth(props) {
-  const { currentBartender } = props
+  const { currentBartender,handleSignOutBartender} = props
 
   return (
     <>
@@ -9,7 +9,7 @@ export default function BarAuth(props) {
       <Link to="/bartender/jobs">
         Current Jobs
       </Link>
-      <Link to="/">
+      <Link to="/" onClick={handleSignOutBartender}>
         Log Out
       </Link>
       </>

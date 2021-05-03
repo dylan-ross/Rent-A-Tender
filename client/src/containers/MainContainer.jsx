@@ -2,32 +2,29 @@ import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import Home from "../screens/home/Home";
 import Bartenders from "../screens/bartenders/Bartenders";
+import Category from "../screens/category/Category"
 import BartenderDetail from "../screens/bartenderDetail/BartenderDetail";
-// import BartenderProfileForm from '../screens/bartenderProfileForm/BartenderProfileForm';
 import BartenderJobs from "../screens/bartenderJobs/BartenderJobs";
 import Confirmation from "../screens/confirmation/Confirmation";
 import UserJobs from "../screens/userJobs/UserJobs";
 import CreateJob from "../screens/createJob/CreateJob";
 import EditJob from "../screens/editJob/EditJob";
-// import Category from "../screens/category/Category";
-// import Search from "../components/search/Search";
 import { getAllJobs, postJob, putJob, deleteJob } from "../services/jobs";
-import {
-  getAllBartenders,
-  // postBartender,
-  // putBartender,
-} from "../services/bartenders";
+import { getAllBartenders } from "../services/bartenders";
 
 export default function MainContainer(props) {
   const [bartenders, setBartenders] = useState([]);
+  const [bartenderList, setBartenderList] = useState([]);
   const [jobs, setJobs] = useState([]);
   const history = useHistory();
-  const { currentUser, currentBartender, queriedBartendrs } = props;
+;  const { currentUser, currentBartender } = props;
 
   useEffect(() => {
     const fetchBartenders = async () => {
       const bartenderData = await getAllBartenders();
       setBartenders(bartenderData);
+      setBartenderList(bartenderData);
+      console.log(bartenderList);
     };
     fetchBartenders();
   }, []);
@@ -45,14 +42,6 @@ export default function MainContainer(props) {
     fetchJobs();
   }, []);
 
-  // const handleEditBartender = async (id, formData) => {
-  //   const bartenderData = await putBartender(id, formData);
-  //   setBartenders(prevState => prevState.map(bartender => {
-  //     return bartenderData.id === Number(id) ? bartenderData : bartender
-  //   }))
-  //   history.push('bartenders/:bartender_id/jobs')
-  // }
-
   const handleCreateJob = async (formData) => {
     const jobData = await postJob(formData);
     setJobs((prevState) => [...prevState, jobData]);
@@ -67,13 +56,13 @@ export default function MainContainer(props) {
       })
     );
     fetchJobs();
-    history.push("/user/jobs");
+    history.push("/user/events");
   };
 
   const handleDeleteJob = async (id) => {
     await deleteJob(id);
     setJobs((prevState) => prevState.filter((job) => job.id !== id));
-    history.push("/user/jobs");
+    history.push("/user/events");
   };
 
   return (
@@ -83,28 +72,24 @@ export default function MainContainer(props) {
           currentUser={currentUser}
           currentBartender={currentBartender}
           bartenders={bartenders}
-          queriedBartenders={queriedBartendrs}
+          setBartenders={setBartenders}
+          bartenderList={bartenderList}
+          setBartender={setBartenderList}
         />
       </Route>
       <Route exact path="/bartenders">
         <Bartenders bartenders={bartenders} currentUser={currentUser} />
       </Route>
-      {/* <Route exact path="/bartenders/category">
-        <Category bartenders={bartenders}/>
-      </Route> */}
+      <Route exact path="/bartenders/category/flair">
+        <Category bartenders={bartenders} currentUser={currentUser} />
+      </Route>
       <Route exact path="/bartenders/:id">
         <BartenderDetail
           currentBartender={currentBartender}
           currentUser={currentUser}
         />
       </Route>
-      {/* <Route exact path='/bartenders/:id/create_profile'>
-        <BartenderProfileForm bartenders={bartenders} currentBartender={currentBartender}/>
-      </Route>
-      <Route exact path='/bartenders/:id/edit_profile'>
-        <BartenderProfileForm bartenders={bartenders} currentBartender={currentBartender} handleEditBartender={handleEditBartender}/>
-      </Route> */}
-      <Route exact path="/bartenders/:id/jobs">
+      <Route exact path="/bartender/jobs">
         <BartenderJobs
           currentBartender={currentBartender}
           jobs={jobs}
@@ -118,7 +103,7 @@ export default function MainContainer(props) {
           handleCreateJob={handleCreateJob}
         />
       </Route>
-      <Route exact path="/user/jobs">
+      <Route exact path="/user/events">
         <UserJobs
           currentUser={currentUser}
           jobs={jobs}

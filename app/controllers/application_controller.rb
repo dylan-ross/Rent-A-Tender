@@ -31,6 +31,7 @@ class ApplicationController < ActionController::API
     begin
       @decoded = decode(header)
       @current_bartender = Bartender.find(@decoded[:id])
+      p @current_bartender
     rescue ActiveRecord::RecordNotFound => e
       render json: { errors: e.message }, status: :unauthorized
     rescue JWT::DecodeError => e

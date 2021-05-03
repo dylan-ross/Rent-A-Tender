@@ -1,19 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Bartenders.css";
-import Search from "../../components/search/Search";
-// import { bartenders, currentUser } from "../../services/bartenders";
 
-const Bartenders = (props) => {
-  const [queriedBartenders, setQueriedBartenders] = useState([]);
+export default function Bartenders(props) {
   const { bartenders } = props;
-  console.log(bartenders)
-  const handleSearch = (event) => {
-    const newQueriedBartenders = bartenders.filter((bartender) =>
-      bartender.name.toLowerCase().includes(event.target.value.toLowerCase())
-    );
-    setQueriedBartenders(newQueriedBartenders);
-  };
+  console.log(bartenders);
 
   if (!bartenders) {
     return (
@@ -23,8 +14,8 @@ const Bartenders = (props) => {
     );
   }
 
-  const bartendersJSX = queriedBartenders.map((bartender, index) => (
-    <React.Fragment key={index}>
+  const bartendersJSX = bartenders.map((bartender, index) => (
+    <div>
       <Link className="bartender" to={`/bartenders/${bartender.id}`}>
         <img
           className="bartender-image"
@@ -34,20 +25,13 @@ const Bartenders = (props) => {
         />
         <h3 className="bartender-name">{bartender.name}</h3>
       </Link>
-    </React.Fragment>
+    </div>
   ));
-
-  const handleSubmit = (event) => event.preventDefault();
 
   return (
     <div className="bartender-screen-container">
-      <div className="header">
-        <h3 className="bartenders-title">Bartenders</h3>
-        <Search onSubmit={handleSubmit} onChange={handleSearch} />
-      </div>
+      <h3 className="bartenders-title">Bartenders</h3>
       <div>{bartendersJSX}</div>
     </div>
-  );
-};
-
-export default Bartenders;
+  )
+}
