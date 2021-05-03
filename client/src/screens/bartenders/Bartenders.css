@@ -1,0 +1,9 @@
+.bartender-screen-container {
+  background: var(--secondary-bg-color);
+  display: flex;
+  flex-direction: ;
+}
+
+.bartender {
+  background: var(--main-bg-color);
+}

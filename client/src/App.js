@@ -16,17 +16,21 @@ function App() {
   const [currentBartender, setCurrentBartender] = useState([])
   const history = useHistory();
 
+  const handleVerifyUser = async () => {
+    const userData = await verifyUser();
+    setCurrentUser(userData.user);
+  }
+
   useEffect(() => {
-    const handleVerifyUser = async () => {
-      const userData = await verifyUser();
-      setCurrentUser(userData);
-    }
+ 
     handleVerifyUser()
   }, [])
 
   useEffect(() => {
     const handleVerifyBartender = async () => {
+      console.log("verifying bartender")
       const bartenderData = await verifyBartender();
+      console.log(bartenderData)
       setCurrentBartender(bartenderData);
     }
     handleVerifyBartender()
@@ -87,11 +91,11 @@ function App() {
           <Route exact path='/bartender_signup'>
             <BartenderSignUp handleSignUpBartender={handleSignUpBartender} />
           </Route>
-          <Route exact path='/'> 
+          {/* <Route exact path='/'> 
             <Home currentUser={currentUser} currentBartender={currentBartender}/>
-          </Route>
+          </Route> */}
           <Route path='/'>
-            <MainContainer currentUser={currentUser} currentBartender={currentBartender} />
+            <MainContainer currentUser={currentUser} currentBartender={currentBartender} verify={verifyUser}/>
           </Route>
         </Switch>
       </Layout>
