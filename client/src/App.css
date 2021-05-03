@@ -25,6 +25,12 @@ form {
   width: 30%;
 }
 
+a {
+  font-family: main;
+  text-decoration: none;
+  color: black;
+}
+
 
 
 

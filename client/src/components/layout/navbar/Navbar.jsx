@@ -26,7 +26,7 @@ export default function Navbar(props) {
       {currentUser ? (
         <div className="current-user-nav">
           <p>{currentUser.username}</p>
-          <Link to={`/users/user/jobs`}>Upcoming Events</Link>
+          <Link to={`/user/jobs`}>Upcoming Events</Link>
           <button onClick={handleSignOutUser}>Logout</button>
         </div>
       ) : (

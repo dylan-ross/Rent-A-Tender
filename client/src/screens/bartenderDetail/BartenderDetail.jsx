@@ -23,6 +23,7 @@ const BartenderDetail = (props) => {
           className="bartender-detail-image"
           src={bartenderItem?.img_url}
           alt={bartenderItem?.name}
+          width="30%"
         />
         <div className="bartender-detail-text">
           <h3 className="bartender-detail-name">{bartenderItem?.name}</h3>

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Home = (props) => {
-  const { bartenders, currentUser, currentBartenders } = props;
+  const { bartenders } = props;
   const [queriedBartenders, setQueriedBartenders] = useState([]);
 
   const handleSearch = (event) => {
@@ -18,9 +18,9 @@ const Home = (props) => {
     <div className='home'>
       <Search onSubmit={handleSubmit} onChange={handleSearch} />
       <div className='home-buttons'>
-        <Link to='/bartenders'><button>Casual</button></Link>
-        <Link to='/bartenders'><button>Cocktail</button></Link>
-        <Link to='/bartenders'><button>Flair</button></Link>
+        <Link to='/bartenders/casual'><button>Casual</button></Link>
+        <Link to='/bartenders/category/cocktail'><button>Cocktail</button></Link>
+        <Link to='/bartenders/category/flair'><button>Flair</button></Link>
       </div>
     </div>  
   )
