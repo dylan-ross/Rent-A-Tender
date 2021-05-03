@@ -17,10 +17,8 @@
 
 
 - Have a working, reactive, React app.
-  - The user can browse and search bartenders, but in order to see details or book a job a user must be signed in
   - Only Users can book a bartender, they are booked for a date and a block of time
   - Users and Bartenders will both have ability to read, update, and delete a job
-  - Bartenders create, and edit their profiles
   - All links must work
 
 ### Goals
