@@ -6,6 +6,9 @@ export default function BartenderSignUp(props) {
     email: "",
     password: "",
     category: "",
+    intro: "",
+    bio: "",
+    skills: "",
     rate: "",
   });
   const {
