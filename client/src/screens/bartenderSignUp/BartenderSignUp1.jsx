@@ -5,6 +5,8 @@ export default function BartenderSignUp(props) {
     name: "",
     email: "",
     password: "",
+    category: "",
+    rate: "",
   });
   const {
     name,
@@ -94,7 +96,7 @@ export default function BartenderSignUp(props) {
         Rate:
         <input
           type="number"
-          name="category"
+          name="rate"
           value={rate}
           onChange={handleChange}
         />
