@@ -4,12 +4,26 @@
 }
 
 .link {
+  font-size: 3ch;
   padding: 3%;
 }
 
 @media (max-width: 550px) {
-  .logo {
-    height: 100%;
+
+  .nav{
+    flex-direction: column;
   }
+
+  .logo{
+    margin-right: 38%;
+  }
+
+  .link {
+    font-size: 2ch;
+    padding: 0;
+    margin-left: 70%;
+    margin-bottom: 1%;
+  }
+  
 }
 
