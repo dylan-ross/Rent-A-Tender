@@ -80,9 +80,6 @@ export default function MainContainer(props) {
       <Route exact path="/bartenders">
         <Bartenders bartenders={bartenders} currentUser={currentUser} />
       </Route>
-      <Route exact path="/bartenders/category/flair">
-        <Category bartenders={bartenders} currentUser={currentUser} />
-      </Route>
       <Route exact path="/bartenders/:id">
         <BartenderDetail
           currentBartender={currentBartender}
@@ -114,7 +111,7 @@ export default function MainContainer(props) {
       <Route exact path="/job/confirmation">
         <Confirmation currentUser={currentUser} jobs={jobs} />
       </Route>
-      <Route exact path="/jobs/:id/edit">
+      <Route exact path="/jobs/:id">
         <EditJob
           currentUser={currentUser}
           jobs={jobs}

@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 export default function UnAuth () {
   return (
     <>
-      <Link to="/bartender_signin">
+      <Link className="link" to="/bartender_signin">
         Bartend
       </Link>
-      <Link to="/user_signin">
+      <Link className="link" to="/user_signin">
         Sign In
       </Link>
-      <Link to="/user_signup">
+      <Link className="link" to="/user_signup">
         Join
       </Link>
       </>

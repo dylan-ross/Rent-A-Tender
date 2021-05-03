@@ -8,13 +8,14 @@ export default function UserJobs (props) {
   return (
     <div>
       <h2>User Jobs</h2>
+      <div className="job-flex-container">
       {jobs.map((job) => (
         <div key={job.id} className="event">
           <p>{job.id}</p>
           <p>date: {job.date.slice(0, 10)}</p>
           <p>start: {job.start_time.slice(11, 16)}</p>
           <p> end: {job.end_time.slice(11, 16)}</p>
-          <Link to={`/jobs/${job.id}/edit`}>
+          <Link to={`/jobs/${job.id}`}>
             <button>Edit</button>
           </Link>
           <Link>
@@ -22,6 +23,7 @@ export default function UserJobs (props) {
           </Link>
         </div>
       ))}
+        </div>
     </div>
   );
 };
