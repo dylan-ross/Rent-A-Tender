@@ -70,7 +70,7 @@ function App() {
   const handleSignUpBartender = async (formData) => {
     const bartenderData = await signUpBartender(formData);
     setCurrentBartender(bartenderData);
-    history.push(`/bartenders/jobs`);
+    history.push(`/bartender/jobs`);
   };
 
   const handleSignOutBartender = () => {
