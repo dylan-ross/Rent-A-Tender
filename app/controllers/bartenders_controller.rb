@@ -15,7 +15,7 @@ class BartendersController < ApplicationController
     @bartender = Bartender.new(bartender_params)
     
     if @bartender.save
-      @token = encode({id: @bartender.id})
+      @token = encode({ id: @bartender.id })
       render json: {
         bartender: @bartender.as_json(except: "password_digest", include: :jobs),
         token: @token

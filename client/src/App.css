@@ -21,8 +21,13 @@ button {
 }
 
 form {
-  background: var(--secondary-bg-color);
+  background-color: var(--secondary-bg-color);
   width: 30%;
+  border-radius:30%;
+  border: black solid 2px;
+  margin-left: 10%;
+  margin-top: 10%;
+  padding: 2%;
 }
 
 a {
@@ -30,6 +35,13 @@ a {
   text-decoration: none;
   color: black;
 }
+
+@media (max-width: 550px) {
+  .App {
+  background-color: var(--secondary-bg-color);
+  }
+}
+
 
 
 

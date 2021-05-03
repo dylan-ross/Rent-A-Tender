@@ -5,10 +5,10 @@ export default function UserAuth(props) {
   return (
     <>
       <p>{currentUser.username}</p>
-      <Link to="/user/events">
+      <Link className="link" to="/user/events">
         Upcoming Events
       </Link>
-      <Link to="/" onClick={handleSignOutUser}>
+      <Link className="link" to="/" onClick={handleSignOutUser}>
         Log Out
       </Link>
       </>

@@ -23,8 +23,8 @@ const CreateJob = (props) => {
 
   return (
     <div className="job-form">
-      <h2>JobForm</h2>
-      <form  onSubmit={(e) => {
+      <h2>Book Your Event</h2>
+      <form  className="job-form" onSubmit={(e) => {
         e.preventDefault();
         handleCreateJob({ ...formData, bartender_id: id });
       }}>

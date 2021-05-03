@@ -8,8 +8,7 @@ const EditJob = (props) => {
     end_time: ''
   })
 
-  const params = useParams()
-  const { id } = params
+  const { id } = useParams()
   const { jobs, handleEditJob } = props
   const { date, start_time, end_time } = formData;
 
@@ -39,7 +38,7 @@ const EditJob = (props) => {
 
   return (
     <div className="job-form">
-      <h2>JobForm</h2>
+      <h2>Edit Event</h2>
       <form  onSubmit={(e) => {
         e.preventDefault();
         handleEditJob(id, formData);
