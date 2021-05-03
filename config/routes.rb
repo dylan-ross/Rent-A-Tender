@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :jobs
   end
 
-  # resources :jobs
+  resources :jobs
 
   resources :bartenders, only: [:create, :index] do
     resources :jobs, only: [:index, :destroy]
