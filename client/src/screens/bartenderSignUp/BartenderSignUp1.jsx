@@ -10,6 +10,7 @@ export default function BartenderSignUp(props) {
     bio: "",
     skills: "",
     rate: "",
+    img_url: "",
   });
   const {
     name,
