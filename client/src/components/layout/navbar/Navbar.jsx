@@ -16,26 +16,26 @@ export default function Navbar(props) {
 
   return (
     <div className="nav">
-      <Link className="logo" to="/">
-        <img src={logo} alt="Rent-A-Tender" width="50%" />
+      <Link to="/">
+        <img className="logo" src={logo} alt="Rent-A-Tender" width="50%" />
       </Link>
-      <Link to="/bartenders">
+      <Link className="link" to="/bartenders">
         <p>Bartenders</p>
       </Link>
       {currentUser && (
-        <UserAuth
+        <UserAuth className="user-auth"
           currentUser={currentUser}
           handleSignOutUser={handleSignOutUser}
         />
       )}
 
       {currentBartender && (
-        <BarAuth
+        <BarAuth calssName="bar-auth"
           currentBartender={currentBartender}
           handleSignOutBartender={handleSignOutBartender}
         />
       )}
-      {!currentBartender && !currentUser && <UnAuth />}
+      {!currentBartender && !currentUser && <UnAuth className="no-auth"/>}
     </div>
   );
 }

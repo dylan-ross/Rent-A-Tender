@@ -15,15 +15,16 @@ export default function Bartenders(props) {
   }
 
   const bartendersJSX = bartenders.map((bartender, index) => (
-    <div>
-      <Link className="bartender" to={`/bartenders/${bartender.id}`}>
+    <div className="bartender">
+      <Link to={`/bartenders/${bartender.id}`}>
         <img
           className="bartender-image"
           src={bartender.img_url}
           alt={bartender.name}
-          width="20%"
+          width="70%"
         />
         <h3 className="bartender-name">{bartender.name}</h3>
+        <h3 className="bartender-rate">{bartender.rate}</h3>
       </Link>
     </div>
   ));
@@ -31,7 +32,7 @@ export default function Bartenders(props) {
   return (
     <div className="bartender-screen-container">
       <h3 className="bartenders-title">Bartenders</h3>
-      <div>{bartendersJSX}</div>
+      <div className="bar-container">{bartendersJSX}</div>
     </div>
-  )
+  );
 }

@@ -2,3 +2,14 @@
   display: flex;
   flex-direction: row;
 }
+
+.link {
+  padding: 3%;
+}
+
+@media (max-width: 550px) {
+  .logo {
+    height: 100%;
+  }
+}
+
