@@ -17,7 +17,7 @@ class BarAuthController < ApplicationController
 
   def bartender_verify
     render json: {
-      bartender: @bartender.as_json(except: "password_digest", include: :jobs)
+      bartender: @current_bartender.as_json(except: "password_digest", include: :jobs)
     }, status: :ok
   end
 

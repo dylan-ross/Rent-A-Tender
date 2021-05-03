@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
-  has_many :jobs
+  has_many :jobs, dependent: :delete_all
 
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true

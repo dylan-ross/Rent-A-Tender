@@ -19,6 +19,9 @@ export default function Navbar(props) {
       <Link className="logo" to="/">
         <img src={logo} alt="Rent-A-Tender" width="50%" />
       </Link>
+      <Link to="/bartenders">
+        <p>Bartenders</p>
+      </Link>
       {currentUser && (
         <UserAuth
           currentUser={currentUser}

@@ -13,7 +13,7 @@
   height: 100vh;
   font-family: main;
   text-align: center;
-  background: var(--main-bg-color) url("../src/assets/images/bartender.png") 100% 100% no-repeat;
+  background: var(--main-bg-color) url("../src/components/assets/images/bartender.png") 100% 100% no-repeat;
 }
 
 button {
