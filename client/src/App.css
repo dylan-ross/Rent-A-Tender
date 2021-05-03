@@ -40,6 +40,12 @@ a {
   .App {
   background-color: var(--secondary-bg-color);
   }
+
+  form {
+    width: 50%;
+    opacity: .9;
+    margin: 5% auto;
+  }
 }
 
 
