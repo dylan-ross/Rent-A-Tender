@@ -1,20 +1,4 @@
-@keyframes shake {
-  from {transform: rotate(20deg)}
-  to {transform: rotate(20deg)}
-}
 
-.small-logo {
-  width: 30%;
-}
 
-.small-logo:hover{
-  animation: shake;
-}
 
-@media (max-width: 550px) {
-  .small-logo {
-    width: 1%;
-    top: 100px;
-  }
-}
 

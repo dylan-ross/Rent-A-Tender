@@ -5,8 +5,8 @@ export default function Home () {
 
   return (
     <div className="home">
-      <Link className="small-logo" to="/bartenders">
-      <img src={logo} alt="link to bartenders" />
+      <Link to="/bartenders">
+      <img className="small-logo" src={logo} alt="link to bartenders" />
       </Link>
     </div>
   );

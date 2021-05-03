@@ -18,3 +18,17 @@
   border-radius: 30%;
 }
 
+
+@media (max-width: 892px) {
+  .job-flex-container {
+    /* align-items: center; */
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .event {
+    width: 70%;
+    margin: 5% auto;
+    opacity: .9;
+  }
+}
