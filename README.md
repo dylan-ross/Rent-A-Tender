@@ -1,6 +1,8 @@
 
 # Rent-A-Tender
 
+https://rent-a-tender.netlify.app/
+
 ## Overview
 
 **Rent-A-Tender**, is an App to find and hire freelance bartenders to work a party or event. Bartenders must register by filling out a profile which includes and hourly rate. Anyone can search bartenders, but a user must sign in to see details and book a date and time for a bartender to work. Rent-A-Tender, we bring the bar...tender to you.
@@ -117,37 +119,37 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| create backend app. |    H     |     .25 hr     |       TBD     |     TBD     |
-| create database     |    H     |     .25 hr     |       TBD     |     TBD     |
-| create tables       |    H     |     .25 hr     |       TBD     |     TBD     |
-| seed bartenders     |    H     |       1 hr     |       TBD     |     TBD     |
-| set up controllers  |    H     |       3 hrs    |       TBD     |     TBD     |
-| set up models       |    H     |       1 hr     |       TBD     |     TBD     |
-| test endpoints      |    H     |      .5 hr     |       TBD     |     TBD     |
-| set up auth         |    H     |       3 hrs    |       TBD     |     TBD     |
-| set up CORS.        |    H     |     .25 hr     |       TBD     |     TBD     |
-| create react app    |    H     |     .25 hr     |       TBD     |     TBD     |
-| directory setup     |    H     |       1 hr     |       TBD     |     TBD     |
-| api-helper cmpt     |    H     |      .5 hr     |       TBD     |     TBD     |
-| main-conainer       |    H     |       3 hrs    |       TBD     |     TBD     |
-| front end auth      |    H     |       3 hrs    |       TBD     |     TBD     |
-| basic layout        |    H     |       1 hr     |       TBD     |     TBD     |
-| user signup/in      |    H     |       3 hrs    |       TBD     |     TBD     |
-| bartender signup/in |    H     |       3 hrs    |       TBD     |     TBD     |
-| profile form        |    H     |       2 hrs    |       TBD     |     TBD     |
-| test front end auth |    H     |      .5 hr     |       TBD     |     TBD     |
-| home screen         |    H     |       2 hrs    |       TBD     |     TBD     |
-| bartenders screen   |    H     |       2 hrs    |       TBD     |     TBD     |
-| bartender detail    |    H     |       2 hrs    |       TBD     |     TBD     |
-| jobs screen         |    H     |       2 hrs    |       TBD     |     TBD     |
-| booking modal       |    H     |       2 hrs    |       TBD     |     TBD     |
-| confirmation page   |    H     |       1 hr     |       TBD     |     TBD     |
-| check links         |    H     |       1 hr     |       TBD     |     TBD     |
-| check functionality |    H     |       1 hr     |       TBD     |     TBD     |
-| basic css           |    H     |       3 hrs    |       TBD     |     TBD     |
-| responsive design   |    H     |       3 hrs    |       TBD     |     TBD     |
-| media quieres       |    H     |       3 hrs    |       TBD     |     TBD     |
-| TOTAL               |          |    48.75 hrs   |       TBD     |     TBD     |
+| create backend app. |    H     |     .25 hr     |       .25     |     .25     |
+| create database     |    H     |     .25 hr     |       .25     |     .25     |
+| create tables       |    H     |     .25 hr     |       .25     |     .25     |
+| seed bartenders     |    H     |       1 hr     |       1hr     |     1hr     |
+| set up controllers  |    H     |       3 hrs    |       3hr     |     3hr     |
+| set up models       |    H     |       1 hr     |       1hr     |     1hr     |
+| test endpoints      |    H     |      .5 hr     |       1hr     |     1hr     |
+| set up auth         |    H     |       3 hrs    |       3hr     |     3hr     |
+| set up CORS.        |    H     |     .25 hr     |       .25     |     .25     |
+| create react app    |    H     |     .25 hr     |       .25     |     .25     |
+| directory setup     |    H     |       1 hr     |        .5     |      .5     |
+| api-helper cmpt     |    H     |      .5 hr     |        .5     |      .5     |
+| main-conainer       |    H     |       3 hrs    |       3hr     |     3hr     |
+| front end auth      |    H     |       3 hrs    |       3hr     |     3hr     |
+| basic layout        |    H     |       1 hr     |       3hr     |     3hr     |
+| user signup/in      |    H     |       3 hrs    |       3hr     |     3hr     |
+| bartender signup/in |    H     |       3 hrs    |       3hr     |     3hr     |
+| profile form        |    H     |       2 hrs    |       3hr     |     3hr     |
+| test front end auth |    H     |      .5 hr     |       1hr     |     1hr     |
+| home screen         |    H     |       2 hrs    |       2hr     |     2hr     |
+| bartenders screen   |    H     |       2 hrs    |       2hr     |     2hr     |
+| bartender detail    |    H     |       2 hrs    |       2hr     |     2hr     |
+| jobs screen         |    H     |       2 hrs    |       2hr     |     2hr     |
+| booking modal       |    H     |       2 hrs    |       2hr     |     2hr     |
+| confirmation page   |    H     |       1 hr     |       2hr     |     2hr     |
+| check links         |    H     |       1 hr     |       2hr     |     2hr     |
+| check functionality |    H     |       1 hr     |       2hr     |     2hr     |
+| basic css           |    H     |       3 hrs    |       3hr     |     3hr     |
+| responsive design   |    H     |       3 hrs    |       3hr     |     3hr     |
+| media quieres       |    H     |       3 hrs    |       3hr     |     3hr     |
+| TOTAL               |          |    48.75 hrs   |       52hr    |     52hr    |
 
  
 <br>
